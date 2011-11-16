@@ -6,8 +6,11 @@
 //  Copyright (c) 2011 Iridia Productions. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface IRWMFDocument : NSObject
+
++ (id) documentWithData:(NSData *)data;
+- (id) initWithData:(NSData *)data;
+
+- (CGImageRef) fullResolutionImage;
 
 @end

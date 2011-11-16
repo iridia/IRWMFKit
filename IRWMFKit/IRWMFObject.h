@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IRWMFDecoding.h"
 
-@interface IRWMFObject : NSObject
+@interface IRWMFObject : NSObject <IRWMFDecoding>
 
 @end

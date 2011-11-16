@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IRWMFRecord : NSObject
+#import "IRWMFDecoding.h"
+
+@interface IRWMFRecord : NSObject <IRWMFDecoding>
+
+@end
+
+@interface IRWMFHeaderRecord : IRWMFRecord
 
 @end

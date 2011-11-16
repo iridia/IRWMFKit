@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IRWMFKit : NSObject
-
-@end
+#import "IRWMFDecoder.h"
+#import "IRWMFDocument.h"
+#import "IRWMFRecord.h"
+#import "IRWMFObject.h"

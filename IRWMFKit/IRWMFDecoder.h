@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class IRWMFDocument;
+
 @interface IRWMFDecoder : NSObject
+
++ (id) sharedDecoder;
+
+- (IRWMFDocument *) documentWithData:(NSData *)data;
+- (IRWMFDocument *) documentWithData:(NSData *)data error:(NSError **)error;
 
 @end
