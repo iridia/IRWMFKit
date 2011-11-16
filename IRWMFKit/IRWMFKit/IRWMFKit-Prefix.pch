@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'IRWMFKit' target in the 'IRWMFKit' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif

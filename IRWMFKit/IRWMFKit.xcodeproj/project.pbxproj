@@ -1,0 +1,231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFAE51D1147055C00006BA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
+		FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51D6147055C00006BA76 /* IRWMFKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FFAE51CD147055C00006BA76 /* libIRWMFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRWMFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAE51D0147055C00006BA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FFAE51D4147055C00006BA76 /* IRWMFKit-Prefix.pch */ = {isa = PBXFileReference; path = "IRWMFKit-Prefix.pch"; sourceTree = "<group>"; };
+		FFAE51D5147055C00006BA76 /* IRWMFKit.h */ = {isa = PBXFileReference; path = IRWMFKit.h; sourceTree = "<group>"; };
+		FFAE51D6147055C00006BA76 /* IRWMFKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRWMFKit.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFAE51CA147055C00006BA76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAE51D1147055C00006BA76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFAE51C2147055C00006BA76 = {
+			isa = PBXGroup;
+			children = (
+				FFAE51D2147055C00006BA76 /* IRWMFKit */,
+				FFAE51CF147055C00006BA76 /* Frameworks */,
+				FFAE51CE147055C00006BA76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFAE51CE147055C00006BA76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFAE51CD147055C00006BA76 /* libIRWMFKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFAE51CF147055C00006BA76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFAE51D0147055C00006BA76 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFAE51D2147055C00006BA76 /* IRWMFKit */ = {
+			isa = PBXGroup;
+			children = (
+				FFAE51D5147055C00006BA76 /* IRWMFKit.h */,
+				FFAE51D6147055C00006BA76 /* IRWMFKit.m */,
+				FFAE51D3147055C00006BA76 /* Supporting Files */,
+			);
+			path = IRWMFKit;
+			sourceTree = "<group>";
+		};
+		FFAE51D3147055C00006BA76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFAE51D4147055C00006BA76 /* IRWMFKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FFAE51CB147055C00006BA76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FFAE51CC147055C00006BA76 /* IRWMFKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFAE51DA147055C00006BA76 /* Build configuration list for PBXNativeTarget "IRWMFKit" */;
+			buildPhases = (
+				FFAE51C9147055C00006BA76 /* Sources */,
+				FFAE51CA147055C00006BA76 /* Frameworks */,
+				FFAE51CB147055C00006BA76 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IRWMFKit;
+			productName = IRWMFKit;
+			productReference = FFAE51CD147055C00006BA76 /* libIRWMFKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFAE51C4147055C00006BA76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Iridia Productions";
+			};
+			buildConfigurationList = FFAE51C7147055C00006BA76 /* Build configuration list for PBXProject "IRWMFKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FFAE51C2147055C00006BA76;
+			productRefGroup = FFAE51CE147055C00006BA76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFAE51CC147055C00006BA76 /* IRWMFKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFAE51C9147055C00006BA76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FFAE51D8147055C00006BA76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FFAE51D9147055C00006BA76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFAE51DB147055C00006BA76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/IRWMFKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRWMFKit/IRWMFKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FFAE51DC147055C00006BA76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/IRWMFKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRWMFKit/IRWMFKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFAE51C7147055C00006BA76 /* Build configuration list for PBXProject "IRWMFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAE51D8147055C00006BA76 /* Debug */,
+				FFAE51D9147055C00006BA76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFAE51DA147055C00006BA76 /* Build configuration list for PBXNativeTarget "IRWMFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAE51DB147055C00006BA76 /* Debug */,
+				FFAE51DC147055C00006BA76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFAE51C4147055C00006BA76 /* Project object */;
+}
