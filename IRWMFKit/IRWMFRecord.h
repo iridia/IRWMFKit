@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 
 #import "IRWMFDecoding.h"
+#import "IRWMFDefines.h"
 
 @interface IRWMFRecord : NSObject <IRWMFDecoding>
+
+@property (nonatomic, readonly, assign) IRWMFRecordType recordType;
 
 @end
 

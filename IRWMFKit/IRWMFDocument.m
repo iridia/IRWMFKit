@@ -7,6 +7,9 @@
 //
 
 #import "IRWMFDocument.h"
+#import "IRWMFObject.h"
+#import "IRWMFRecord.h"
+#import "IRWMFDecoding.h"
 
 @interface IRWMFDocument ()
 @property (nonatomic, readwrite, retain) NSData *data;
@@ -35,18 +38,51 @@
 
 }
 
-- (CGImageRef) fullResolutionImage {
-
-	return nil;
-
-}
-
 - (void) dealloc {
 
 	[data release];
 	[wmfObjects release];
 	[wmfRecords release];
 	[super dealloc];
+
+}
+
+- (NSArray *) wmfRecords {
+
+	if (wmfRecords)
+		return wmfRecords;
+
+	NSData *capturedData = [[self.data retain] autorelease];
+	if (!capturedData)
+		return nil;
+	
+	NSMutableArray *records = [NSMutableArray array];
+	
+	NSUInteger totalBytes = [capturedData length];
+	NSUInteger consumedBytes = 0;
+	NSUInteger lastRecordLength = 0;
+	NSError *decodingError = nil;
+	
+	do {
+	
+		lastRecordLength = 0;
+		
+		IRWMFRecord *decodedRecord = [IRWMFRecord objectWithData:capturedData offset:consumedBytes usedBytes:&lastRecordLength error:&decodingError];
+		
+		if (decodedRecord)
+			[records addObject:decodedRecord];
+		
+		consumedBytes += lastRecordLength;
+	
+	} while ((consumedBytes < totalBytes) && lastRecordLength && !decodingError);
+	
+	if (decodingError) {
+		NSLog(@"Error decoding: %@", decodingError);
+		return nil;
+	}
+	
+	self.wmfRecords = [[records copy] autorelease];
+	return wmfRecords;
 
 }
 

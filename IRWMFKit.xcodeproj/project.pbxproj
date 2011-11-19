@@ -15,11 +15,28 @@
 		FF0D424C1474238500340287 /* IRWMFDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0D424A1474238500340287 /* IRWMFDecoder.m */; };
 		FF0D424E147432A100340287 /* IRWMFDecoding.h in Headers */ = {isa = PBXBuildFile; fileRef = FF0D424D147432A100340287 /* IRWMFDecoding.h */; };
 		FF0D42501474364E00340287 /* IRWMFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = FF0D424F1474364E00340287 /* IRWMFDefines.h */; };
+		FF5C88E41477DDE500D794AB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C88E31477DDE500D794AB /* SenTestingKit.framework */; };
+		FF5C88E61477DDE500D794AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C88E51477DDE500D794AB /* UIKit.framework */; };
+		FF5C88E71477DDE500D794AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
+		FF5C88ED1477DDE500D794AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5C88EB1477DDE500D794AB /* InfoPlist.strings */; };
+		FF5C88F01477DDE500D794AB /* IRWMFKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */; };
+		FF5C88F8147816B600D794AB /* libIRWMFKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51CD147055C00006BA76 /* libIRWMFKit.a */; };
+		FF5C89491478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf in Resources */ = {isa = PBXBuildFile; fileRef = FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */; };
 		FFAE51D1147055C00006BA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
 		FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51D6147055C00006BA76 /* IRWMFKit.m */; };
 		FFAE51E2147055FA0006BA76 /* IRWMFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */; };
 		FFAE51E3147055FA0006BA76 /* IRWMFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF5C88F6147816AE00D794AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFAE51C4147055C00006BA76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFAE51CC147055C00006BA76;
+			remoteInfo = IRWMFKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FF0D42401474237600340287 /* IRWMFRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRecord.h; sourceTree = "<group>"; };
@@ -30,6 +47,15 @@
 		FF0D424A1474238500340287 /* IRWMFDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFDecoder.m; sourceTree = "<group>"; };
 		FF0D424D147432A100340287 /* IRWMFDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFDecoding.h; sourceTree = "<group>"; };
 		FF0D424F1474364E00340287 /* IRWMFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFDefines.h; sourceTree = "<group>"; };
+		FF5C88E21477DDE500D794AB /* IRWMFKitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRWMFKitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5C88E31477DDE500D794AB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FF5C88E51477DDE500D794AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FF5C88EA1477DDE500D794AB /* IRWMFKitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IRWMFKitTest-Info.plist"; sourceTree = "<group>"; };
+		FF5C88EC1477DDE500D794AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF5C88EE1477DDE500D794AB /* IRWMFKitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRWMFKitTest.h; sourceTree = "<group>"; };
+		FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRWMFKitTest.m; sourceTree = "<group>"; };
+		FF5C88F11477DDE500D794AB /* IRWMFKitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKitTest-Prefix.pch"; sourceTree = "<group>"; };
+		FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRWMFKitTest-Word-RTF-Embedded.wmf"; sourceTree = "<group>"; };
 		FFAE51CD147055C00006BA76 /* libIRWMFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRWMFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAE51D0147055C00006BA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFAE51D4147055C00006BA76 /* IRWMFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -40,6 +66,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FF5C88DE1477DDE500D794AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C88F8147816B600D794AB /* libIRWMFKit.a in Frameworks */,
+				FF5C88E41477DDE500D794AB /* SenTestingKit.framework in Frameworks */,
+				FF5C88E61477DDE500D794AB /* UIKit.framework in Frameworks */,
+				FF5C88E71477DDE500D794AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFAE51CA147055C00006BA76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,10 +88,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF5C88E81477DDE500D794AB /* IRWMFKitTest */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C88EE1477DDE500D794AB /* IRWMFKitTest.h */,
+				FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */,
+				FF5C88E91477DDE500D794AB /* Supporting Files */,
+			);
+			path = IRWMFKitTest;
+			sourceTree = "<group>";
+		};
+		FF5C88E91477DDE500D794AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */,
+				FF5C88EA1477DDE500D794AB /* IRWMFKitTest-Info.plist */,
+				FF5C88EB1477DDE500D794AB /* InfoPlist.strings */,
+				FF5C88F11477DDE500D794AB /* IRWMFKitTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FFAE51C2147055C00006BA76 = {
 			isa = PBXGroup;
 			children = (
 				FFAE51D2147055C00006BA76 /* IRWMFKit */,
+				FF5C88E81477DDE500D794AB /* IRWMFKitTest */,
 				FFAE51CF147055C00006BA76 /* Frameworks */,
 				FFAE51CE147055C00006BA76 /* Products */,
 			);
@@ -64,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				FFAE51CD147055C00006BA76 /* libIRWMFKit.a */,
+				FF5C88E21477DDE500D794AB /* IRWMFKitTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				FFAE51D0147055C00006BA76 /* Foundation.framework */,
+				FF5C88E31477DDE500D794AB /* SenTestingKit.framework */,
+				FF5C88E51477DDE500D794AB /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +185,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FF5C88E11477DDE500D794AB /* IRWMFKitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF5C88F41477DDE500D794AB /* Build configuration list for PBXNativeTarget "IRWMFKitTest" */;
+			buildPhases = (
+				FF5C88DD1477DDE500D794AB /* Sources */,
+				FF5C88DE1477DDE500D794AB /* Frameworks */,
+				FF5C88DF1477DDE500D794AB /* Resources */,
+				FF5C88E01477DDE500D794AB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF5C88F7147816AE00D794AB /* PBXTargetDependency */,
+			);
+			name = IRWMFKitTest;
+			productName = IRWMFKitTest;
+			productReference = FF5C88E21477DDE500D794AB /* IRWMFKitTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		FFAE51CC147055C00006BA76 /* IRWMFKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFAE51DA147055C00006BA76 /* Build configuration list for PBXNativeTarget "IRWMFKit" */;
@@ -161,11 +242,48 @@
 			projectRoot = "";
 			targets = (
 				FFAE51CC147055C00006BA76 /* IRWMFKit */,
+				FF5C88E11477DDE500D794AB /* IRWMFKitTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		FF5C88DF1477DDE500D794AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C88ED1477DDE500D794AB /* InfoPlist.strings in Resources */,
+				FF5C89491478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FF5C88E01477DDE500D794AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		FF5C88DD1477DDE500D794AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C88F01477DDE500D794AB /* IRWMFKitTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFAE51C9147055C00006BA76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,7 +298,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FF5C88F7147816AE00D794AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFAE51CC147055C00006BA76 /* IRWMFKit */;
+			targetProxy = FF5C88F6147816AE00D794AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF5C88EB1477DDE500D794AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5C88EC1477DDE500D794AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		FF5C88F21477DDE500D794AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRWMFKitTest/IRWMFKitTest-Prefix.pch";
+				INFOPLIST_FILE = "IRWMFKitTest/IRWMFKitTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FF5C88F31477DDE500D794AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRWMFKitTest/IRWMFKitTest-Prefix.pch";
+				INFOPLIST_FILE = "IRWMFKitTest/IRWMFKitTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		FFAE51D8147055C00006BA76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -248,6 +415,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FF5C88F41477DDE500D794AB /* Build configuration list for PBXNativeTarget "IRWMFKitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5C88F21477DDE500D794AB /* Debug */,
+				FF5C88F31477DDE500D794AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FFAE51C7147055C00006BA76 /* Build configuration list for PBXProject "IRWMFKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
