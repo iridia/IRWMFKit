@@ -14,8 +14,14 @@
 @interface IRWMFRecord : NSObject <IRWMFDecoding>
 
 @property (nonatomic, readonly, assign) IRWMFRecordType recordType;
+@property (nonatomic, readonly, assign) int32_t objectSize; 
+
++ (BOOL) recordTypeFromData:(NSData *)incomingData atByteOffset:(NSUInteger)offsetBytes;
++ (BOOL) canHandleRecordType:(IRWMFRecordType)aType;
++ (Class) bestClassForRecordType:(IRWMFRecordType)aType;
 
 @end
+
 
 @interface IRWMFHeaderRecord : IRWMFRecord
 

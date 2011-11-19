@@ -22,6 +22,14 @@
 		FF5C88F01477DDE500D794AB /* IRWMFKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */; };
 		FF5C88F8147816B600D794AB /* libIRWMFKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51CD147055C00006BA76 /* libIRWMFKit.a */; };
 		FF5C89491478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf in Resources */ = {isa = PBXBuildFile; fileRef = FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */; };
+		FF5C894C1478334E00D794AB /* IRWMFDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C894B1478334E00D794AB /* IRWMFDefines.m */; };
+		FF5C8950147835B900D794AB /* IRWMFRecordType.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C894E147835B900D794AB /* IRWMFRecordType.h */; };
+		FF5C8951147835B900D794AB /* IRWMFRecordType.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C894F147835B900D794AB /* IRWMFRecordType.m */; };
+		FF5C8954147836A700D794AB /* IRWMFExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8952147836A700D794AB /* IRWMFExportSession.h */; };
+		FF5C8955147836A700D794AB /* IRWMFExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C8953147836A700D794AB /* IRWMFExportSession.m */; };
+		FF5C8957147836BB00D794AB /* IRWMFRecordExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */; };
+		FF5C895B147836EF00D794AB /* IRWMFDocument+Exporting.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */; };
+		FF5C895C147836EF00D794AB /* IRWMFDocument+Exporting.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */; };
 		FFAE51D1147055C00006BA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
 		FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51D6147055C00006BA76 /* IRWMFKit.m */; };
 		FFAE51E2147055FA0006BA76 /* IRWMFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */; };
@@ -56,6 +64,14 @@
 		FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRWMFKitTest.m; sourceTree = "<group>"; };
 		FF5C88F11477DDE500D794AB /* IRWMFKitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKitTest-Prefix.pch"; sourceTree = "<group>"; };
 		FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRWMFKitTest-Word-RTF-Embedded.wmf"; sourceTree = "<group>"; };
+		FF5C894B1478334E00D794AB /* IRWMFDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFDefines.m; sourceTree = "<group>"; };
+		FF5C894E147835B900D794AB /* IRWMFRecordType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRecordType.h; sourceTree = "<group>"; };
+		FF5C894F147835B900D794AB /* IRWMFRecordType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFRecordType.m; sourceTree = "<group>"; };
+		FF5C8952147836A700D794AB /* IRWMFExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFExportSession.h; sourceTree = "<group>"; };
+		FF5C8953147836A700D794AB /* IRWMFExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFExportSession.m; sourceTree = "<group>"; };
+		FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRecordExporting.h; sourceTree = "<group>"; };
+		FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IRWMFDocument+Exporting.h"; sourceTree = "<group>"; };
+		FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IRWMFDocument+Exporting.m"; sourceTree = "<group>"; };
 		FFAE51CD147055C00006BA76 /* libIRWMFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRWMFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAE51D0147055C00006BA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFAE51D4147055C00006BA76 /* IRWMFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -109,6 +125,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FF5C894A147831E300D794AB /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D42401474237600340287 /* IRWMFRecord.h */,
+				FF0D42411474237600340287 /* IRWMFRecord.m */,
+			);
+			name = Records;
+			sourceTree = "<group>";
+		};
+		FF5C894D147835A300D794AB /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D424F1474364E00340287 /* IRWMFDefines.h */,
+				FF5C894B1478334E00D794AB /* IRWMFDefines.m */,
+				FF5C894E147835B900D794AB /* IRWMFRecordType.h */,
+				FF5C894F147835B900D794AB /* IRWMFRecordType.m */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		FF5C8958147836DD00D794AB /* Exporting */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */,
+				FF5C8952147836A700D794AB /* IRWMFExportSession.h */,
+				FF5C8953147836A700D794AB /* IRWMFExportSession.m */,
+				FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */,
+				FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */,
+			);
+			name = Exporting;
+			sourceTree = "<group>";
+		};
 		FFAE51C2147055C00006BA76 = {
 			isa = PBXGroup;
 			children = (
@@ -141,18 +189,18 @@
 		FFAE51D2147055C00006BA76 /* IRWMFKit */ = {
 			isa = PBXGroup;
 			children = (
+				FF5C894D147835A300D794AB /* Defines */,
 				FFAE51D5147055C00006BA76 /* IRWMFKit.h */,
 				FFAE51D6147055C00006BA76 /* IRWMFKit.m */,
 				FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */,
 				FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */,
 				FF0D424D147432A100340287 /* IRWMFDecoding.h */,
-				FF0D42401474237600340287 /* IRWMFRecord.h */,
-				FF0D42411474237600340287 /* IRWMFRecord.m */,
+				FF5C894A147831E300D794AB /* Records */,
 				FF0D42451474237E00340287 /* IRWMFObject.h */,
 				FF0D42461474237E00340287 /* IRWMFObject.m */,
 				FF0D42491474238500340287 /* IRWMFDecoder.h */,
 				FF0D424A1474238500340287 /* IRWMFDecoder.m */,
-				FF0D424F1474364E00340287 /* IRWMFDefines.h */,
+				FF5C8958147836DD00D794AB /* Exporting */,
 				FFAE51D3147055C00006BA76 /* Supporting Files */,
 			);
 			path = IRWMFKit;
@@ -179,6 +227,10 @@
 				FF0D424B1474238500340287 /* IRWMFDecoder.h in Headers */,
 				FF0D424E147432A100340287 /* IRWMFDecoding.h in Headers */,
 				FF0D42501474364E00340287 /* IRWMFDefines.h in Headers */,
+				FF5C8950147835B900D794AB /* IRWMFRecordType.h in Headers */,
+				FF5C8954147836A700D794AB /* IRWMFExportSession.h in Headers */,
+				FF5C8957147836BB00D794AB /* IRWMFRecordExporting.h in Headers */,
+				FF5C895B147836EF00D794AB /* IRWMFDocument+Exporting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5C88F01477DDE500D794AB /* IRWMFKitTest.m in Sources */,
+				FF5C894C1478334E00D794AB /* IRWMFDefines.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +346,9 @@
 				FF0D42431474237600340287 /* IRWMFRecord.m in Sources */,
 				FF0D42481474237E00340287 /* IRWMFObject.m in Sources */,
 				FF0D424C1474238500340287 /* IRWMFDecoder.m in Sources */,
+				FF5C8951147835B900D794AB /* IRWMFRecordType.m in Sources */,
+				FF5C8955147836A700D794AB /* IRWMFExportSession.m in Sources */,
+				FF5C895C147836EF00D794AB /* IRWMFDocument+Exporting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

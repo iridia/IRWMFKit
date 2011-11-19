@@ -16,6 +16,7 @@
 @implementation IRWMFRecord
 
 @synthesize recordType;
+@synthesize objectSize;
 
 + (id) objectWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
 
@@ -36,7 +37,7 @@
 	NSUInteger ownOffset = 0;
 	
 	const void *dataBytes = [data bytes];
-	int32_t objectSize = OSReadLittleInt32(dataBytes, offsetBytes + ownOffset) * BYTES_PER_DWORD;
+	objectSize = OSReadLittleInt32(dataBytes, offsetBytes + ownOffset) * BYTES_PER_DWORD;
 	ownOffset += 4;
 	
 	//	WIP Maybe do sanity check here
@@ -57,8 +58,8 @@
 - (NSString *) description {
 
 	return [[NSString stringWithFormat:@"<%@: 0x%X", NSStringFromClass([self class]), (unsigned int)self] stringByAppendingFormat:
-		@"; Record Type = %x>",
-		recordType
+		@"; Record Type = %@; Declared Size = %i>",
+		IRWMFRecordTypeNames[recordType], objectSize
 	];
 
 }
