@@ -10,6 +10,6 @@
 
 @interface IRWMFDocument (Exporting)
 
-- (CGImageRef) fullResolutionImage;
+- (CGImageRef) newFullResolutionImage;
 
 @end

@@ -10,6 +10,6 @@
 
 @interface IRWMFExportSession : NSObject
 
-- (CGImageRef) fullResolutionImage;
+@property (nonatomic, readwrite, assign) CGContextRef context;	//	if not nil, released on -dealloc
 
 @end

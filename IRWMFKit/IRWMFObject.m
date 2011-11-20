@@ -10,4 +10,16 @@
 
 @implementation IRWMFObject
 
++ (id) objectWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
+
+	return nil;
+
+}
+
+- (void) configureWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
+
+	//	nothing
+
+}
+
 @end

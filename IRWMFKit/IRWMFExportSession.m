@@ -10,4 +10,15 @@
 
 @implementation IRWMFExportSession
 
+@synthesize context;
+
+- (void) dealloc {
+
+	if (context)
+		CFRelease(context);
+	
+	[super dealloc];
+
+}
+
 @end

@@ -64,6 +64,29 @@
 
 }
 
++ (IRWMFRecordType) recordTypeFromData:(NSData *)incomingData atByteOffset:(NSUInteger)offsetBytes {
+
+	if (offsetBytes == 0)
+		return IRWMFRecordHeaderType;
+
+	NSParameterAssert([incomingData length] > (offsetBytes + 4 + 2));
+	
+	return OSReadLittleInt16([incomingData bytes], offsetBytes + 4);
+
+}
+
++ (BOOL) canHandleRecordType:(IRWMFRecordType)aType {
+
+	return YES;
+
+}
+
++ (Class) bestClassForRecordType:(IRWMFRecordType)aType {
+
+	return self;
+
+}
+
 @end
 
 

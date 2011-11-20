@@ -13,7 +13,7 @@
 
 @implementation IRWMFDocument (Exporting)
 
-- (CGImageRef) fullResolutionImage {
+- (CGImageRef) newFullResolutionImage {
 
 	//	CGContextRef context = cgcontext
 	
@@ -31,7 +31,13 @@
 		
 	}];
 	
-	return [exportSession fullResolutionImage];
+	if (!exportSession.context) {
+		NSLog(@"Export Session %@ does not even hold a context", exportSession);
+		return (CGImageRef)nil;
+	}
+	
+	CGImageRef image = CGBitmapContextCreateImage(exportSession.context);	
+	return (CGImageRef)image;
 
 };
 
