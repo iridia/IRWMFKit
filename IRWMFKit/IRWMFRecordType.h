@@ -12,8 +12,8 @@ extern const NSString * IRWMFRecordTypeNames[];
 
 typedef enum {
 
-	IRWMFRecordHeaderType,
-	IRWMFRecordUnknownType,
+	IRWMFRecordHeaderType = 0xFF00,
+	IRWMFRecordUnknownType = 0xFFFF,
 	
 	IRWMFRecordType_META_EOF = 0x0000,
 	IRWMFRecordType_META_REALIZEPALETTE = 0x0035,

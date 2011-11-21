@@ -12,6 +12,32 @@
 #import <libkern/OSByteOrder.h>
 
 #define BYTES_PER_DWORD 2
+	
+@class IRWMFRecord;
+@class IRWMFHeaderRecord;
+@class IRWMFSetMapModeRecord;
+
+static void __attribute__((constructor)) initialize() {
+	
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFHeaderRecord") forRecordType:IRWMFRecordHeaderType];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSetMapModeRecord") forRecordType:IRWMFRecordType_META_SETMAPMODE];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSetWindowOriginRecord") forRecordType:IRWMFRecordType_META_SETWINDOWORG];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSetWindowExtentRecord") forRecordType:IRWMFRecordType_META_SETWINDOWEXT];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSaveDeviceContextRecord") forRecordType:IRWMFRecordType_META_SAVEDC];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSetStretchBiltRecord") forRecordType:IRWMFRecordType_META_SETSTRETCHBLTMODE];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFBitMapStretchBiltRecord") forRecordType:IRWMFRecordType_META_DIBSTRETCHBLT];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFRestoreDeviceContextRecord") forRecordType:IRWMFRecordType_META_RESTOREDC];
+
+	[pool drain];	
+}
+
+
+@interface IRWMFRecord () <IRWMFRecordExporting>
+
+@end
+
 
 @implementation IRWMFRecord
 
@@ -20,9 +46,13 @@
 
 + (id) objectWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
 
-	Class usedClass = [IRWMFRecord class];
-	if (offsetBytes == 0) {
-		usedClass = [IRWMFHeaderRecord class];
+	IRWMFRecordType inferredRecordType = [self recordTypeFromData:data atByteOffset:offsetBytes];
+	Class usedClass = [self classForRecordType:inferredRecordType];
+	NSLog(@"currently inferred type is %i, record class is %@", inferredRecordType, usedClass);
+	
+	if (!usedClass) {
+		usedClass = [IRWMFRecord class];
+		NSLog(@"using IRWMFRecord as intended class");
 	}
 	
 	IRWMFRecord *returnedRecord = [[(IRWMFRecord *)[usedClass alloc] init] autorelease];
@@ -45,20 +75,38 @@
 	recordType = OSReadLittleInt16(dataBytes, offsetBytes + ownOffset);
 	ownOffset += 2;
 	
-	NSLog(@"Found record type %x", recordType);
-	//	Maybe mutate self->isa if subclasses don’t provide storage
-	//	Otherwise, maybe else
-	//	[self readRecordPayloadFromData:data offset:(offsetBytes + ownOffset) usedBytes:&payloadLength];
+	[self configureWithBytes:dataBytes withPayloadAtOffset:(offsetBytes + ownOffset)];
 	
 	if (numberOfConsumedBytes)
 		*numberOfConsumedBytes = objectSize;
 
 }
 
+- (void) configureWithBytes:(const void *)dataBytes withPayloadAtOffset:(NSUInteger)offsetBytes {
+
+	//	Root implementation is a no-op
+
+}
+
 - (NSString *) description {
 
-	return [[NSString stringWithFormat:@"<%@: 0x%X", NSStringFromClass([self class]), (unsigned int)self] stringByAppendingFormat:
-		@"; Record Type = %@; Declared Size = %i>",
+	NSString *descriptionRootString = [NSString stringWithFormat:@"<%@: 0x%X", NSStringFromClass([self class]), (unsigned int)self];
+	NSString *descriptionSubstring = [self descriptionSubstring];
+	
+	if (!descriptionSubstring)
+		return [descriptionRootString stringByAppendingString:@">"];
+	
+	return [descriptionRootString stringByAppendingFormat:
+		@"; %@>",
+		descriptionSubstring
+	];
+
+}
+
+- (NSString *) descriptionSubstring {
+	
+	return [NSString stringWithFormat:	
+		@"Record Type = %@; Declared Size = %i",
 		IRWMFRecordTypeNames[recordType], objectSize
 	];
 
@@ -69,9 +117,41 @@
 	if (offsetBytes == 0)
 		return IRWMFRecordHeaderType;
 
-	NSParameterAssert([incomingData length] > (offsetBytes + 4 + 2));
+	NSParameterAssert([incomingData length] >= (offsetBytes + 4 + 2));
 	
 	return OSReadLittleInt16([incomingData bytes], offsetBytes + 4);
+
+}
+
+
++ (CFMutableDictionaryRef) recordTypesToHandlerClasses { 
+
+	static CFMutableDictionaryRef registry = nil;
+	
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+	
+		CFDictionaryKeyCallBacks keyCallbacks = (CFDictionaryKeyCallBacks) { 0, NULL, NULL, NULL, NULL, NULL };
+		registry = CFDictionaryCreateMutable(NULL, 0, &keyCallbacks, NULL);
+					
+	});
+	
+	return registry;
+
+}
+
++ (void) setClass:(Class)aClass forRecordType:(IRWMFRecordType)aType {
+
+	NSParameterAssert(aClass);
+	NSParameterAssert([aClass canHandleRecordType:aType]);
+	
+	CFDictionarySetValue([self recordTypesToHandlerClasses], (void *)aType, aClass);
+
+}
+
++ (Class) classForRecordType:(IRWMFRecordType)aType {
+
+	return CFDictionaryGetValue([self recordTypesToHandlerClasses], (void *)aType);
 
 }
 
@@ -81,80 +161,9 @@
 
 }
 
-+ (Class) bestClassForRecordType:(IRWMFRecordType)aType {
+- (void) configureSessionForExporting:(IRWMFExportSession *)aSession {
 
-	return self;
-
-}
-
-@end
-
-
-
-
-
-@interface IRWMFHeaderRecord ()
-
-@property (nonatomic, readwrite, assign) int16_t metafileType;
-@property (nonatomic, readwrite, assign) int16_t headerSize;
-@property (nonatomic, readwrite, assign) int16_t headerVersion;
-@property (nonatomic, readwrite, assign) int32_t fileSize;
-@property (nonatomic, readwrite, assign) int16_t numberOfObjects;
-@property (nonatomic, readwrite, assign) int32_t maxRecordSize;
-@property (nonatomic, readwrite, assign) int16_t numberOfMembers;
-
-@end
-
-
-@implementation IRWMFHeaderRecord
-
-@synthesize metafileType;
-@synthesize headerSize;
-@synthesize headerVersion;
-@synthesize fileSize;
-@synthesize numberOfObjects;
-@synthesize maxRecordSize;
-@synthesize numberOfMembers;
-
-- (void) configureWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
-
-	NSParameterAssert(offsetBytes == 0);
-		
-	NSUInteger ownOffset = offsetBytes;
-	const void *dataBytes = [data bytes];
-	
-	metafileType = OSReadLittleInt16(dataBytes, ownOffset);
-	ownOffset += 2;
-	
-	headerSize = OSReadLittleInt16(dataBytes, ownOffset) * BYTES_PER_DWORD;
-	ownOffset += 2;
-	
-	headerVersion = OSReadLittleInt16(dataBytes, ownOffset);
-	ownOffset += 2;
-	
-	fileSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_DWORD;
-	ownOffset += 4;
-	
-	numberOfObjects = OSReadLittleInt16(dataBytes, ownOffset);
-	ownOffset += 2;
-	
-	maxRecordSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_DWORD;
-	ownOffset += 4;
-	
-	numberOfMembers = OSReadLittleInt16(dataBytes, ownOffset);
-	ownOffset += 2;
-	
-	if (numberOfConsumedBytes)
-		*numberOfConsumedBytes = (ownOffset - offsetBytes);
-
-}
-
-- (NSString *) description {
-
-	return [[NSString stringWithFormat:@"<%@: 0x%X", NSStringFromClass([self class]), (unsigned int)self] stringByAppendingFormat:
-		@"; Record Type = %x; Metafile Type = %x; Header Size = %i; Header Version = %i; File Size = %i; Number of Objects = %i; Max Record Size = %i; Number of Members = %i>",
-		self.recordType, metafileType, headerSize, headerVersion, fileSize, numberOfObjects, maxRecordSize, numberOfMembers
-	];
+	//	Base class, no op
 
 }
 

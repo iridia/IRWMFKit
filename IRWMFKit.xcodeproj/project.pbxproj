@@ -30,6 +30,28 @@
 		FF5C8957147836BB00D794AB /* IRWMFRecordExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */; };
 		FF5C895B147836EF00D794AB /* IRWMFDocument+Exporting.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */; };
 		FF5C895C147836EF00D794AB /* IRWMFDocument+Exporting.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */; };
+		FF8FECC2147AADFC00C6AFFD /* IRWMFHeaderRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECC0147AADFC00C6AFFD /* IRWMFHeaderRecord.h */; };
+		FF8FECC3147AADFC00C6AFFD /* IRWMFHeaderRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECC1147AADFC00C6AFFD /* IRWMFHeaderRecord.m */; };
+		FF8FECC6147AB07A00C6AFFD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8FECC5147AB07A00C6AFFD /* QuartzCore.framework */; };
+		FF8FECC8147AB08800C6AFFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8FECC7147AB08800C6AFFD /* CoreGraphics.framework */; };
+		FF8FECCB147AB17C00C6AFFD /* IRWMFMapMode.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECC9147AB17C00C6AFFD /* IRWMFMapMode.h */; };
+		FF8FECCC147AB17C00C6AFFD /* IRWMFMapMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECCA147AB17C00C6AFFD /* IRWMFMapMode.m */; };
+		FF8FECCF147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECCD147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h */; };
+		FF8FECD0147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECCE147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m */; };
+		FF8FECD3147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECD1147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h */; };
+		FF8FECD4147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECD2147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m */; };
+		FF8FECD7147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECD5147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.h */; };
+		FF8FECD8147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECD6147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.m */; };
+		FF8FECDB147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECD9147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h */; };
+		FF8FECDC147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECDA147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m */; };
+		FF8FECDF147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECDD147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.h */; };
+		FF8FECE0147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECDE147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.m */; };
+		FF8FECE3147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECE1147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h */; };
+		FF8FECE4147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECE2147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m */; };
+		FF8FECE7147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECE5147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h */; };
+		FF8FECE8147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */; };
+		FF8FED2D147ABACF00C6AFFD /* IRWMFStretchMode.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */; };
+		FF8FED2E147ABACF00C6AFFD /* IRWMFStretchMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */; };
 		FFAE51D1147055C00006BA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
 		FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51D6147055C00006BA76 /* IRWMFKit.m */; };
 		FFAE51E2147055FA0006BA76 /* IRWMFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */; };
@@ -72,6 +94,28 @@
 		FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRecordExporting.h; sourceTree = "<group>"; };
 		FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IRWMFDocument+Exporting.h"; sourceTree = "<group>"; };
 		FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IRWMFDocument+Exporting.m"; sourceTree = "<group>"; };
+		FF8FECC0147AADFC00C6AFFD /* IRWMFHeaderRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFHeaderRecord.h; sourceTree = "<group>"; };
+		FF8FECC1147AADFC00C6AFFD /* IRWMFHeaderRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFHeaderRecord.m; sourceTree = "<group>"; };
+		FF8FECC5147AB07A00C6AFFD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FF8FECC7147AB08800C6AFFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FF8FECC9147AB17C00C6AFFD /* IRWMFMapMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFMapMode.h; sourceTree = "<group>"; };
+		FF8FECCA147AB17C00C6AFFD /* IRWMFMapMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFMapMode.m; sourceTree = "<group>"; };
+		FF8FECCD147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetMapModeRecord.h; sourceTree = "<group>"; };
+		FF8FECCE147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetMapModeRecord.m; sourceTree = "<group>"; };
+		FF8FECD1147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetWindowOriginRecord.h; sourceTree = "<group>"; };
+		FF8FECD2147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetWindowOriginRecord.m; sourceTree = "<group>"; };
+		FF8FECD5147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetWindowExtentRecord.h; sourceTree = "<group>"; };
+		FF8FECD6147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetWindowExtentRecord.m; sourceTree = "<group>"; };
+		FF8FECD9147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSaveDeviceContextRecord.h; sourceTree = "<group>"; };
+		FF8FECDA147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSaveDeviceContextRecord.m; sourceTree = "<group>"; };
+		FF8FECDD147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetStretchBiltRecord.h; sourceTree = "<group>"; };
+		FF8FECDE147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetStretchBiltRecord.m; sourceTree = "<group>"; };
+		FF8FECE1147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFBitMapStretchBiltRecord.h; sourceTree = "<group>"; };
+		FF8FECE2147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFBitMapStretchBiltRecord.m; sourceTree = "<group>"; };
+		FF8FECE5147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRestoreDeviceContextRecord.h; sourceTree = "<group>"; };
+		FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFRestoreDeviceContextRecord.m; sourceTree = "<group>"; };
+		FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFStretchMode.h; sourceTree = "<group>"; };
+		FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFStretchMode.m; sourceTree = "<group>"; };
 		FFAE51CD147055C00006BA76 /* libIRWMFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRWMFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAE51D0147055C00006BA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFAE51D4147055C00006BA76 /* IRWMFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -86,6 +130,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8FECC8147AB08800C6AFFD /* CoreGraphics.framework in Frameworks */,
+				FF8FECC6147AB07A00C6AFFD /* QuartzCore.framework in Frameworks */,
 				FF5C88F8147816B600D794AB /* libIRWMFKit.a in Frameworks */,
 				FF5C88E41477DDE500D794AB /* SenTestingKit.framework in Frameworks */,
 				FF5C88E61477DDE500D794AB /* UIKit.framework in Frameworks */,
@@ -130,6 +176,22 @@
 			children = (
 				FF0D42401474237600340287 /* IRWMFRecord.h */,
 				FF0D42411474237600340287 /* IRWMFRecord.m */,
+				FF8FECC0147AADFC00C6AFFD /* IRWMFHeaderRecord.h */,
+				FF8FECC1147AADFC00C6AFFD /* IRWMFHeaderRecord.m */,
+				FF8FECCD147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h */,
+				FF8FECCE147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m */,
+				FF8FECD1147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h */,
+				FF8FECD2147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m */,
+				FF8FECD5147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.h */,
+				FF8FECD6147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.m */,
+				FF8FECD9147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h */,
+				FF8FECDA147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m */,
+				FF8FECDD147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.h */,
+				FF8FECDE147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.m */,
+				FF8FECE1147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h */,
+				FF8FECE2147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m */,
+				FF8FECE5147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h */,
+				FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */,
 			);
 			name = Records;
 			sourceTree = "<group>";
@@ -141,6 +203,10 @@
 				FF5C894B1478334E00D794AB /* IRWMFDefines.m */,
 				FF5C894E147835B900D794AB /* IRWMFRecordType.h */,
 				FF5C894F147835B900D794AB /* IRWMFRecordType.m */,
+				FF8FECC9147AB17C00C6AFFD /* IRWMFMapMode.h */,
+				FF8FECCA147AB17C00C6AFFD /* IRWMFMapMode.m */,
+				FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */,
+				FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */,
 			);
 			name = Defines;
 			sourceTree = "<group>";
@@ -160,6 +226,8 @@
 		FFAE51C2147055C00006BA76 = {
 			isa = PBXGroup;
 			children = (
+				FF8FECC7147AB08800C6AFFD /* CoreGraphics.framework */,
+				FF8FECC5147AB07A00C6AFFD /* QuartzCore.framework */,
 				FFAE51D2147055C00006BA76 /* IRWMFKit */,
 				FF5C88E81477DDE500D794AB /* IRWMFKitTest */,
 				FFAE51CF147055C00006BA76 /* Frameworks */,
@@ -231,6 +299,16 @@
 				FF5C8954147836A700D794AB /* IRWMFExportSession.h in Headers */,
 				FF5C8957147836BB00D794AB /* IRWMFRecordExporting.h in Headers */,
 				FF5C895B147836EF00D794AB /* IRWMFDocument+Exporting.h in Headers */,
+				FF8FECC2147AADFC00C6AFFD /* IRWMFHeaderRecord.h in Headers */,
+				FF8FECCB147AB17C00C6AFFD /* IRWMFMapMode.h in Headers */,
+				FF8FECCF147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h in Headers */,
+				FF8FECD3147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h in Headers */,
+				FF8FECD7147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.h in Headers */,
+				FF8FECDB147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h in Headers */,
+				FF8FECDF147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.h in Headers */,
+				FF8FECE3147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h in Headers */,
+				FF8FECE7147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h in Headers */,
+				FF8FED2D147ABACF00C6AFFD /* IRWMFStretchMode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +427,16 @@
 				FF5C8951147835B900D794AB /* IRWMFRecordType.m in Sources */,
 				FF5C8955147836A700D794AB /* IRWMFExportSession.m in Sources */,
 				FF5C895C147836EF00D794AB /* IRWMFDocument+Exporting.m in Sources */,
+				FF8FECC3147AADFC00C6AFFD /* IRWMFHeaderRecord.m in Sources */,
+				FF8FECCC147AB17C00C6AFFD /* IRWMFMapMode.m in Sources */,
+				FF8FECD0147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m in Sources */,
+				FF8FECD4147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m in Sources */,
+				FF8FECD8147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.m in Sources */,
+				FF8FECDC147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m in Sources */,
+				FF8FECE0147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.m in Sources */,
+				FF8FECE4147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m in Sources */,
+				FF8FECE8147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m in Sources */,
+				FF8FED2E147ABACF00C6AFFD /* IRWMFStretchMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +472,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRWMFKitTest/IRWMFKitTest-Prefix.pch";
 				INFOPLIST_FILE = "IRWMFKitTest/IRWMFKitTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -399,6 +491,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRWMFKitTest/IRWMFKitTest-Prefix.pch";
 				INFOPLIST_FILE = "IRWMFKitTest/IRWMFKitTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -450,7 +546,10 @@
 				DSTROOT = /tmp/IRWMFKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRWMFKit/IRWMFKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -462,7 +561,10 @@
 				DSTROOT = /tmp/IRWMFKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRWMFKit/IRWMFKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -478,6 +580,7 @@
 				FF5C88F31477DDE500D794AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFAE51C7147055C00006BA76 /* Build configuration list for PBXProject "IRWMFKit" */ = {
 			isa = XCConfigurationList;

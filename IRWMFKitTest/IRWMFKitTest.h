@@ -8,6 +8,9 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
+@class IRWMFDocument;
 @interface IRWMFKitTest : SenTestCase
+
+- (IRWMFDocument *) newTestDocument NS_RETURNS_RETAINED;
 
 @end

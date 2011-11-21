@@ -9,23 +9,11 @@
 #import "IRWMFKitTest.h"
 #import "IRWMFKit.h"
 
+#import "IRWMFDocument+Exporting.h"
+
 @implementation IRWMFKitTest
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void) testDocumentDecoding {
+- (IRWMFDocument *) newTestDocument {
 
 	NSBundle *ownBundle = [NSBundle bundleForClass:[self class]];
 	NSString *imagePath = [ownBundle pathForResource:@"IRWMFKitTest-Word-RTF-Embedded" ofType:@"wmf"];
@@ -34,7 +22,28 @@
 	IRWMFDocument *document = [IRWMFDocument documentWithData:[NSData dataWithContentsOfMappedFile:imagePath]];
 	STAssertNotNil(document, @"Document must exist.");
 	
-	NSLog(@"document records %@", document.wmfRecords);
+	return [document retain];
+
+}
+
+- (void) testDocumentDecoding {
+
+	IRWMFDocument *document = [[self newTestDocument] autorelease];
+	NSArray *documentWMFRecords = document.wmfRecords;
+	NSLog(@"documentWMFRecords %@", documentWMFRecords);
+	STAssertNotNil(document.wmfRecords, @"Document should decode with WMF records.");
+
+}
+
+- (void) testExporting {
+
+	IRWMFDocument *document = [[self newTestDocument] autorelease];
+	
+	CGImageRef fullResolutionImage = [document newFullResolutionImage];
+	STAssertNotNil((id)fullResolutionImage, @"Document should export.");
+	
+	if (fullResolutionImage)
+		CFRelease(fullResolutionImage);
 
 }
 

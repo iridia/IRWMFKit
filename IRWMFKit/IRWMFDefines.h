@@ -9,3 +9,5 @@
 #import <Foundation/Foundation.h>
 
 #import "IRWMFRecordType.h"
+#import "IRWMFMapMode.h"
+#import "IRWMFStretchMode.h"
