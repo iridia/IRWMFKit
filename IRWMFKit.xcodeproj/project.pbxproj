@@ -52,6 +52,8 @@
 		FF8FECE8147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */; };
 		FF8FED2D147ABACF00C6AFFD /* IRWMFStretchMode.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */; };
 		FF8FED2E147ABACF00C6AFFD /* IRWMFStretchMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */; };
+		FF8FED32147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FED30147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h */; };
+		FF8FED33147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FED31147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m */; };
 		FFAE51D1147055C00006BA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
 		FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51D6147055C00006BA76 /* IRWMFKit.m */; };
 		FFAE51E2147055FA0006BA76 /* IRWMFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */; };
@@ -116,6 +118,8 @@
 		FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFRestoreDeviceContextRecord.m; sourceTree = "<group>"; };
 		FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFStretchMode.h; sourceTree = "<group>"; };
 		FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFStretchMode.m; sourceTree = "<group>"; };
+		FF8FED30147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFBitmapInfoHeaderObject.h; sourceTree = "<group>"; };
+		FF8FED31147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFBitmapInfoHeaderObject.m; sourceTree = "<group>"; };
 		FFAE51CD147055C00006BA76 /* libIRWMFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRWMFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAE51D0147055C00006BA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFAE51D4147055C00006BA76 /* IRWMFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -223,6 +227,17 @@
 			name = Exporting;
 			sourceTree = "<group>";
 		};
+		FF8FED2F147AC1F500C6AFFD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D42451474237E00340287 /* IRWMFObject.h */,
+				FF0D42461474237E00340287 /* IRWMFObject.m */,
+				FF8FED30147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h */,
+				FF8FED31147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		FFAE51C2147055C00006BA76 = {
 			isa = PBXGroup;
 			children = (
@@ -264,8 +279,7 @@
 				FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */,
 				FF0D424D147432A100340287 /* IRWMFDecoding.h */,
 				FF5C894A147831E300D794AB /* Records */,
-				FF0D42451474237E00340287 /* IRWMFObject.h */,
-				FF0D42461474237E00340287 /* IRWMFObject.m */,
+				FF8FED2F147AC1F500C6AFFD /* Objects */,
 				FF0D42491474238500340287 /* IRWMFDecoder.h */,
 				FF0D424A1474238500340287 /* IRWMFDecoder.m */,
 				FF5C8958147836DD00D794AB /* Exporting */,
@@ -309,6 +323,7 @@
 				FF8FECE3147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h in Headers */,
 				FF8FECE7147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h in Headers */,
 				FF8FED2D147ABACF00C6AFFD /* IRWMFStretchMode.h in Headers */,
+				FF8FED32147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +452,7 @@
 				FF8FECE4147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m in Sources */,
 				FF8FECE8147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m in Sources */,
 				FF8FED2E147ABACF00C6AFFD /* IRWMFStretchMode.m in Sources */,
+				FF8FED33147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
