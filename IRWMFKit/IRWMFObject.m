@@ -13,7 +13,7 @@
 + (id) objectWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
 
 	IRWMFObject *returnedObject = [[[self alloc] init] autorelease];
-	[returnedObject configureWithData:data offset:offsetBytes usedBytes:numberOfConsumedBytes error:&configurationError];
+	[returnedObject configureWithData:data offset:offsetBytes usedBytes:numberOfConsumedBytes error:error];
 	
 	return returnedObject;
 

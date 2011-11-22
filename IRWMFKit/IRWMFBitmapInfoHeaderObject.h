@@ -7,6 +7,7 @@
 //
 
 #import "IRWMFObject.h"
+#import "IRWMFDefines.h"
 
 @interface IRWMFBitmapInfoHeaderObject : IRWMFObject
 
@@ -27,7 +28,7 @@
 @property (nonatomic, readonly, assign) uint32_t blueColorMask;
 @property (nonatomic, readonly, assign) uint32_t alphaColorMask;
 @property (nonatomic, readonly, assign) IRWMFLogicalColorSpace colorSpace;
-@property (nonatomic, readonly, assign) IRWMFCIEXYZTriple chromaticityEndpoints;
+@property (nonatomic, readonly, retain) IRWMFObject *chromaticityEndpoints;
 @property (nonatomic, readonly, assign) Float32 redGamma;
 @property (nonatomic, readonly, assign) Float32 greenGamma;
 @property (nonatomic, readonly, assign) Float32 blueGamma;

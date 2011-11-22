@@ -6,8 +6,6 @@
 //  Copyright (c) 2011 Iridia Productions. All rights reserved.
 //
 
-#import "IRWMFRecord.h"
-
 typedef enum {
 	IRWMFStretchMode_BLACKONWHITE = 0x0001,
 	IRWMFStretchMode_WHITEONBLACK = 0x0002,

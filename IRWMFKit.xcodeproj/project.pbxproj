@@ -58,6 +58,12 @@
 		FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51D6147055C00006BA76 /* IRWMFKit.m */; };
 		FFAE51E2147055FA0006BA76 /* IRWMFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */; };
 		FFAE51E3147055FA0006BA76 /* IRWMFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */; };
+		FFFAFFA9147BF69D00C9ECB1 /* IRWMFBitCount.h in Headers */ = {isa = PBXBuildFile; fileRef = FFFAFFA7147BF69D00C9ECB1 /* IRWMFBitCount.h */; };
+		FFFAFFAA147BF69D00C9ECB1 /* IRWMFBitCount.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFAFFA8147BF69D00C9ECB1 /* IRWMFBitCount.m */; };
+		FFFAFFAE147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = FFFAFFAC147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h */; };
+		FFFAFFAF147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFAFFAD147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m */; };
+		FFFAFFB2147BF78900C9ECB1 /* IRWMFCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = FFFAFFB0147BF78900C9ECB1 /* IRWMFCompression.h */; };
+		FFFAFFB3147BF78900C9ECB1 /* IRWMFCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFAFFB1147BF78900C9ECB1 /* IRWMFCompression.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +133,12 @@
 		FFAE51D6147055C00006BA76 /* IRWMFKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRWMFKit.m; sourceTree = "<group>"; };
 		FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFDocument.h; sourceTree = "<group>"; };
 		FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFDocument.m; sourceTree = "<group>"; };
+		FFFAFFA7147BF69D00C9ECB1 /* IRWMFBitCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFBitCount.h; sourceTree = "<group>"; };
+		FFFAFFA8147BF69D00C9ECB1 /* IRWMFBitCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFBitCount.m; sourceTree = "<group>"; };
+		FFFAFFAC147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFLogicalColorSpace.h; sourceTree = "<group>"; };
+		FFFAFFAD147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFLogicalColorSpace.m; sourceTree = "<group>"; };
+		FFFAFFB0147BF78900C9ECB1 /* IRWMFCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFCompression.h; sourceTree = "<group>"; };
+		FFFAFFB1147BF78900C9ECB1 /* IRWMFCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFCompression.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +223,12 @@
 				FF8FECCA147AB17C00C6AFFD /* IRWMFMapMode.m */,
 				FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */,
 				FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */,
+				FFFAFFA7147BF69D00C9ECB1 /* IRWMFBitCount.h */,
+				FFFAFFA8147BF69D00C9ECB1 /* IRWMFBitCount.m */,
+				FFFAFFAC147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h */,
+				FFFAFFAD147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m */,
+				FFFAFFB0147BF78900C9ECB1 /* IRWMFCompression.h */,
+				FFFAFFB1147BF78900C9ECB1 /* IRWMFCompression.m */,
 			);
 			name = Defines;
 			sourceTree = "<group>";
@@ -324,6 +342,9 @@
 				FF8FECE7147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h in Headers */,
 				FF8FED2D147ABACF00C6AFFD /* IRWMFStretchMode.h in Headers */,
 				FF8FED32147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h in Headers */,
+				FFFAFFA9147BF69D00C9ECB1 /* IRWMFBitCount.h in Headers */,
+				FFFAFFAE147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h in Headers */,
+				FFFAFFB2147BF78900C9ECB1 /* IRWMFCompression.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +474,9 @@
 				FF8FECE8147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m in Sources */,
 				FF8FED2E147ABACF00C6AFFD /* IRWMFStretchMode.m in Sources */,
 				FF8FED33147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m in Sources */,
+				FFFAFFAA147BF69D00C9ECB1 /* IRWMFBitCount.m in Sources */,
+				FFFAFFAF147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m in Sources */,
+				FFFAFFB3147BF78900C9ECB1 /* IRWMFCompression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

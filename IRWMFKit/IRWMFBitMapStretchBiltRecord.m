@@ -9,6 +9,8 @@
 #import "IRWMFBitMapStretchBiltRecord.h"
 #import "IRWMFExportSession.h"
 
+#import "IRWMFBitmapInfoHeaderObject.h"
+
 #define BYTES_PER_DWORD 2
 
 @implementation IRWMFBitMapStretchBiltRecord
@@ -26,6 +28,8 @@
 }
 
 - (void) configureWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
+
+	[super configureWithData:data offset:offsetBytes usedBytes:numberOfConsumedBytes error:error];
 
 	NSUInteger ownOffset = offsetBytes;
 	const void *dataBytes = [data bytes];
@@ -69,6 +73,14 @@
 		ownOffset += 2;
 		
 		NSLog(@"TBD: Read DIB Object at offset %i with probable length of %i", ownOffset, recordSize - ownOffset);
+		
+		NSUInteger bitmapHeaderSize = 0;
+		NSError *bitmapHeaderDecodingError = nil;
+		
+		bitmapObject = [[IRWMFBitmapInfoHeaderObject objectWithData:data offset:ownOffset usedBytes:&bitmapHeaderSize error:&bitmapHeaderDecodingError] retain];
+		
+		if (!bitmapObject)
+			NSLog(@"bitmap object decoding failed: %@", bitmapHeaderDecodingError);
 	
 	} else {
 		
@@ -97,6 +109,17 @@
 	
 	if (numberOfConsumedBytes)
 		*numberOfConsumedBytes = recordSize;
+
+}
+
+- (NSString *) descriptionSubstring {
+
+	return [[[super descriptionSubstring] stringByAppendingString:[NSString stringWithFormat:	
+		@"; From Rect = { %f, %f; %f, %f }; To Rect = { %f, %f; %f, %f }; Bitmap = ",
+		sourceRectXOffset, sourceRectYOffset, sourceRectWidth, sourceRectHeight,
+		destinationRectXOffset, destinationRectYOffset, destinationRectWidth, destinationRectHeight
+	]] stringByAppendingString:
+		[bitmapObject debugDescription]];
 
 }
 

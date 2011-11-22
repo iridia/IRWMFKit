@@ -6,8 +6,6 @@
 //  Copyright (c) 2011 Iridia Productions. All rights reserved.
 //
 
-#import "IRWMFMapMode.h"
-
 typedef enum {
 	IRWMFMapMode_MM_TEXT = 0x0001,
 	IRWMFMapMode_MM_LOMETRIC = 0x0002,

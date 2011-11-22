@@ -11,3 +11,6 @@
 #import "IRWMFRecordType.h"
 #import "IRWMFMapMode.h"
 #import "IRWMFStretchMode.h"
+#import "IRWMFBitCount.h"
+#import "IRWMFLogicalColorSpace.h"
+#import "IRWMFCompression.h"
