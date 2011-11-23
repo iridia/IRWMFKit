@@ -8,7 +8,7 @@
 
 #import "IRWMFBitmapInfoHeaderObject.h"
 
-#define BYTES_PER_DWORD 2
+#define BYTES_PER_DWORD 4
 
 @implementation IRWMFBitmapInfoHeaderObject
 
@@ -57,6 +57,15 @@
 	bitCount = OSReadLittleInt16(dataBytes, ownOffset);
 	ownOffset += 2;
 	
+	if ((ownOffset - offsetBytes) == headerSize) {
+		if (numberOfConsumedBytes) {
+			*numberOfConsumedBytes = ownOffset - offsetBytes;
+		}
+		return;
+	}
+	
+	//	Information exists beyond BitmapCoreHeader object bounds
+	
 	compression = OSReadLittleInt32(dataBytes, ownOffset);
 	ownOffset += 4;
 	
@@ -75,11 +84,19 @@
 	numberOfRequiredColors = OSReadLittleInt32(dataBytes, ownOffset);
 	ownOffset += 4;
 	
-	if ((ownOffset - offsetBytes) <= headerSize)
+	if ((ownOffset - offsetBytes) == headerSize) {
+		if (numberOfConsumedBytes) {
+			*numberOfConsumedBytes = ownOffset - offsetBytes;
+		}
 		return;
+	}
 	
-	//	V4 / V5 info not handled currently
+	//	Information exists beyond BitmapV4Header object bounds
 	return;
+	
+	if (numberOfConsumedBytes) {
+		*numberOfConsumedBytes = ownOffset - offsetBytes;
+	}
 
 }
 

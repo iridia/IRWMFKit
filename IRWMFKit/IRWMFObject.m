@@ -9,13 +9,22 @@
 #import "IRWMFObject.h"
 
 @implementation IRWMFObject
+@synthesize record;
+
++ (id) objectUsingRecord:(IRWMFRecord *)aRecord withData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
+
+	IRWMFObject *returnedObject = [[[self alloc] init] autorelease];
+	[returnedObject setRecord:aRecord];
+	[returnedObject configureWithData:data offset:offsetBytes usedBytes:numberOfConsumedBytes error:error];
+	
+	return returnedObject;	
+
+}
+
 
 + (id) objectWithData:(NSData *)data offset:(NSUInteger)offsetBytes usedBytes:(NSUInteger *)numberOfConsumedBytes error:(NSError **)error {
 
-	IRWMFObject *returnedObject = [[[self alloc] init] autorelease];
-	[returnedObject configureWithData:data offset:offsetBytes usedBytes:numberOfConsumedBytes error:error];
-	
-	return returnedObject;
+	return [self objectUsingRecord:nil withData:data offset:offsetBytes usedBytes:numberOfConsumedBytes error:error];
 
 }
 

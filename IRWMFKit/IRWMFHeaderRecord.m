@@ -9,7 +9,7 @@
 #import "IRWMFHeaderRecord.h"
 #import "IRWMFRecordType.h"
 
-#define BYTES_PER_DWORD 2
+#define BYTES_PER_WORD 2
 
 @interface IRWMFHeaderRecord ()
 
@@ -44,19 +44,19 @@
 	metafileType = OSReadLittleInt16(dataBytes, ownOffset);
 	ownOffset += 2;
 	
-	headerSize = OSReadLittleInt16(dataBytes, ownOffset) * BYTES_PER_DWORD;
+	headerSize = OSReadLittleInt16(dataBytes, ownOffset) * BYTES_PER_WORD;
 	ownOffset += 2;
 	
 	headerVersion = OSReadLittleInt16(dataBytes, ownOffset);
 	ownOffset += 2;
 	
-	fileSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_DWORD;
+	fileSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_WORD;
 	ownOffset += 4;
 	
 	numberOfObjects = OSReadLittleInt16(dataBytes, ownOffset);
 	ownOffset += 2;
 	
-	maxRecordSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_DWORD;
+	maxRecordSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_WORD;
 	ownOffset += 4;
 	
 	numberOfMembers = OSReadLittleInt16(dataBytes, ownOffset);

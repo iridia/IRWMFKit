@@ -14,3 +14,4 @@
 #import "IRWMFBitCount.h"
 #import "IRWMFLogicalColorSpace.h"
 #import "IRWMFCompression.h"
+#import "IRWMFColorUsage.h"

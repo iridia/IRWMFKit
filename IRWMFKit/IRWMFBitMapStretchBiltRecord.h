@@ -9,6 +9,7 @@
 #import "IRWMFRecord.h"
 #import "IRWMFObject.h"
 
+@class IRWMFBitmapObject;
 @interface IRWMFBitMapStretchBiltRecord : IRWMFRecord <IRWMFRecordExporting>
 
 @property (nonatomic, readonly, assign) int32_t rasterOperation;
@@ -21,6 +22,6 @@
 @property (nonatomic, readonly, assign) int16_t destinationRectYOffset;
 @property (nonatomic, readonly, assign) int16_t destinationRectXOffset;
 
-@property (nonatomic, readonly, retain) IRWMFObject *bitmapObject;	//	may be nil if record does not embed stuff
+@property (nonatomic, readonly, retain) IRWMFBitmapObject *bitmapObject;	//	may be nil if record does not embed stuff
 
 @end

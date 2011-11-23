@@ -17,10 +17,10 @@
 
 	NSUInteger ownOffset = 0;
 	
-	xExtent = OSReadLittleInt16(dataBytes, offsetBytes + ownOffset);
+	yExtent = OSReadLittleInt16(dataBytes, offsetBytes + ownOffset);
 	ownOffset += 2;
 	
-	yExtent = OSReadLittleInt16(dataBytes, offsetBytes + ownOffset);
+	xExtent = OSReadLittleInt16(dataBytes, offsetBytes + ownOffset);
 	ownOffset += 2;
 	
 }
@@ -44,7 +44,7 @@
 
 	aSession.contentRect = (CGRect){
 		aSession.contentRect.origin,
-		(CGSize){ xExtent, yExtent }
+		(CGSize){ xExtent - 1, yExtent - 1 }
 	};
 
 }

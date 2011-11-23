@@ -9,9 +9,10 @@
 #import "IRWMFBitMapStretchBiltRecord.h"
 #import "IRWMFExportSession.h"
 
-#import "IRWMFBitmapInfoHeaderObject.h"
+#import "IRWMFBitmapObject.h"
 
-#define BYTES_PER_DWORD 2
+#define BYTES_PER_WORD 2
+#define BYTES_PER_DWORD 4
 
 @implementation IRWMFBitMapStretchBiltRecord
 
@@ -34,10 +35,10 @@
 	NSUInteger ownOffset = offsetBytes;
 	const void *dataBytes = [data bytes];
 	
-	int32_t recordSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_DWORD;
+	int32_t recordSize = OSReadLittleInt32(dataBytes, ownOffset) * BYTES_PER_WORD;
 	ownOffset += 4;
 	
-	int32_t recordFunction = OSReadLittleInt16(dataBytes, ownOffset);
+	int16_t recordFunction = OSReadLittleInt16(dataBytes, ownOffset);
 	ownOffset += 2;
 	
 	//	ummm	
@@ -47,7 +48,7 @@
 	
 		rasterOperation = OSReadLittleInt32(dataBytes, ownOffset);
 		ownOffset += 4;
-		
+				
 		sourceRectHeight = OSReadLittleInt16(dataBytes, ownOffset);
 		ownOffset += 2;
 		
@@ -72,15 +73,15 @@
 		destinationRectXOffset = OSReadLittleInt16(dataBytes, ownOffset);
 		ownOffset += 2;
 		
-		NSLog(@"TBD: Read DIB Object at offset %i with probable length of %i", ownOffset, recordSize - ownOffset);
+		NSUInteger bitmapObjectSize = 0;
+		NSError *bitmapDecodingError = nil;
 		
-		NSUInteger bitmapHeaderSize = 0;
-		NSError *bitmapHeaderDecodingError = nil;
+		bitmapObject = [[IRWMFBitmapObject objectWithData:data offset:ownOffset usedBytes:&bitmapObjectSize error:&bitmapDecodingError] retain];
 		
-		bitmapObject = [[IRWMFBitmapInfoHeaderObject objectWithData:data offset:ownOffset usedBytes:&bitmapHeaderSize error:&bitmapHeaderDecodingError] retain];
+		NSParameterAssert(recordSize == ((ownOffset - offsetBytes) + bitmapObjectSize));
 		
 		if (!bitmapObject)
-			NSLog(@"bitmap object decoding failed: %@", bitmapHeaderDecodingError);
+			NSLog(@"bitmap object decoding failed: %@", bitmapDecodingError);
 	
 	} else {
 		
@@ -130,11 +131,24 @@
 }
 
 - (void) configureSessionForExporting:(IRWMFExportSession *)aSession {
+
+	CGContextRef context = aSession.context;
+	CGImageRef drawnImage = self.bitmapObject.image;
 	
-	//	Fill aSession.context ONE BY ONE (SLOW)
+	CGRect fromRect = (CGRect){
+		sourceRectXOffset, sourceRectYOffset,
+		sourceRectWidth, sourceRectHeight
+	};
 	
-	if (!self.bitmapObject)
+	CGRect toRect = (CGRect){
+		destinationRectXOffset, destinationRectYOffset,
+		destinationRectWidth, destinationRectHeight
+	};
+	
+	if (!drawnImage)
 		return;
+	
+	CGContextDrawImage(context, toRect, drawnImage);
 
 }
 

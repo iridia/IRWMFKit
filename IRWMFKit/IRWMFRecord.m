@@ -11,7 +11,7 @@
 
 #import <libkern/OSByteOrder.h>
 
-#define BYTES_PER_DWORD 2
+#define BYTES_PER_WORD 2
 	
 @class IRWMFRecord;
 @class IRWMFHeaderRecord;
@@ -48,11 +48,9 @@ static void __attribute__((constructor)) initialize() {
 
 	IRWMFRecordType inferredRecordType = [self recordTypeFromData:data atByteOffset:offsetBytes];
 	Class usedClass = [self classForRecordType:inferredRecordType];
-	NSLog(@"currently inferred type is %i, record class is %@", inferredRecordType, usedClass);
 	
 	if (!usedClass) {
-		usedClass = [IRWMFRecord class];
-		NSLog(@"using IRWMFRecord as intended class");
+		usedClass = [IRWMFRecord class];	//	Base class does nothing
 	}
 	
 	IRWMFRecord *returnedRecord = [[(IRWMFRecord *)[usedClass alloc] init] autorelease];
@@ -67,7 +65,7 @@ static void __attribute__((constructor)) initialize() {
 	NSUInteger ownOffset = 0;
 	
 	const void *dataBytes = [data bytes];
-	objectSize = OSReadLittleInt32(dataBytes, offsetBytes + ownOffset) * BYTES_PER_DWORD;
+	objectSize = OSReadLittleInt32(dataBytes, offsetBytes + ownOffset) * BYTES_PER_WORD;
 	ownOffset += 4;
 	
 	//	WIP Maybe do sanity check here
