@@ -29,8 +29,6 @@
 - (void) testDocumentDecoding {
 
 	IRWMFDocument *document = [[self newTestDocument] autorelease];
-	NSArray *documentWMFRecords = document.wmfRecords;
-	
 	STAssertNotNil(document.wmfRecords, @"Document should decode with WMF records.");
 
 }
