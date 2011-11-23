@@ -11,6 +11,6 @@
 + (id) documentWithData:(NSData *)data;
 - (id) initWithData:(NSData *)data;
 
-- (CGImageRef) fullResolutionImage;
+- (NSArray *) wmfRecords;
 
 @end

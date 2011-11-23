@@ -15,11 +15,71 @@
 		FF0D424C1474238500340287 /* IRWMFDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0D424A1474238500340287 /* IRWMFDecoder.m */; };
 		FF0D424E147432A100340287 /* IRWMFDecoding.h in Headers */ = {isa = PBXBuildFile; fileRef = FF0D424D147432A100340287 /* IRWMFDecoding.h */; };
 		FF0D42501474364E00340287 /* IRWMFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = FF0D424F1474364E00340287 /* IRWMFDefines.h */; };
+		FF544BB1147D5BC80060DD57 /* IRWMFRGBQuadObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FF544BAF147D5BC80060DD57 /* IRWMFRGBQuadObject.h */; };
+		FF544BB2147D5BC80060DD57 /* IRWMFRGBQuadObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FF544BB0147D5BC80060DD57 /* IRWMFRGBQuadObject.m */; };
+		FF5C88E41477DDE500D794AB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5C88E31477DDE500D794AB /* SenTestingKit.framework */; };
+		FF5C88E71477DDE500D794AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
+		FF5C88ED1477DDE500D794AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5C88EB1477DDE500D794AB /* InfoPlist.strings */; };
+		FF5C88F01477DDE500D794AB /* IRWMFKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */; };
+		FF5C88F8147816B600D794AB /* libIRWMFKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51CD147055C00006BA76 /* libIRWMFKit.a */; };
+		FF5C89491478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf in Resources */ = {isa = PBXBuildFile; fileRef = FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */; };
+		FF5C894C1478334E00D794AB /* IRWMFDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C894B1478334E00D794AB /* IRWMFDefines.m */; };
+		FF5C8950147835B900D794AB /* IRWMFRecordType.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C894E147835B900D794AB /* IRWMFRecordType.h */; };
+		FF5C8951147835B900D794AB /* IRWMFRecordType.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C894F147835B900D794AB /* IRWMFRecordType.m */; };
+		FF5C8954147836A700D794AB /* IRWMFExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8952147836A700D794AB /* IRWMFExportSession.h */; };
+		FF5C8955147836A700D794AB /* IRWMFExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C8953147836A700D794AB /* IRWMFExportSession.m */; };
+		FF5C8957147836BB00D794AB /* IRWMFRecordExporting.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */; };
+		FF5C895B147836EF00D794AB /* IRWMFDocument+Exporting.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */; };
+		FF5C895C147836EF00D794AB /* IRWMFDocument+Exporting.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */; };
+		FF8FECC2147AADFC00C6AFFD /* IRWMFHeaderRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECC0147AADFC00C6AFFD /* IRWMFHeaderRecord.h */; };
+		FF8FECC3147AADFC00C6AFFD /* IRWMFHeaderRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECC1147AADFC00C6AFFD /* IRWMFHeaderRecord.m */; };
+		FF8FECC6147AB07A00C6AFFD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8FECC5147AB07A00C6AFFD /* QuartzCore.framework */; };
+		FF8FECC8147AB08800C6AFFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8FECC7147AB08800C6AFFD /* CoreGraphics.framework */; };
+		FF8FECCB147AB17C00C6AFFD /* IRWMFMapMode.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECC9147AB17C00C6AFFD /* IRWMFMapMode.h */; };
+		FF8FECCC147AB17C00C6AFFD /* IRWMFMapMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECCA147AB17C00C6AFFD /* IRWMFMapMode.m */; };
+		FF8FECCF147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECCD147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h */; };
+		FF8FECD0147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECCE147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m */; };
+		FF8FECD3147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECD1147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h */; };
+		FF8FECD4147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECD2147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m */; };
+		FF8FECD7147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECD5147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.h */; };
+		FF8FECD8147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECD6147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.m */; };
+		FF8FECDB147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECD9147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h */; };
+		FF8FECDC147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECDA147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m */; };
+		FF8FECDF147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECDD147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.h */; };
+		FF8FECE0147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECDE147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.m */; };
+		FF8FECE3147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECE1147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h */; };
+		FF8FECE4147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECE2147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m */; };
+		FF8FECE7147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FECE5147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h */; };
+		FF8FECE8147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */; };
+		FF8FED2D147ABACF00C6AFFD /* IRWMFStretchMode.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */; };
+		FF8FED2E147ABACF00C6AFFD /* IRWMFStretchMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */; };
+		FF8FED32147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8FED30147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h */; };
+		FF8FED33147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FED31147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m */; };
 		FFAE51D1147055C00006BA76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAE51D0147055C00006BA76 /* Foundation.framework */; };
 		FFAE51D7147055C00006BA76 /* IRWMFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51D6147055C00006BA76 /* IRWMFKit.m */; };
 		FFAE51E2147055FA0006BA76 /* IRWMFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */; };
 		FFAE51E3147055FA0006BA76 /* IRWMFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */; };
+		FFC83F25147D72B5005CACBC /* IRWMFColorUsage.h in Headers */ = {isa = PBXBuildFile; fileRef = FFC83F23147D72B5005CACBC /* IRWMFColorUsage.h */; };
+		FFC83F26147D72B5005CACBC /* IRWMFColorUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC83F24147D72B5005CACBC /* IRWMFColorUsage.m */; };
+		FFFAFFA9147BF69D00C9ECB1 /* IRWMFBitCount.h in Headers */ = {isa = PBXBuildFile; fileRef = FFFAFFA7147BF69D00C9ECB1 /* IRWMFBitCount.h */; };
+		FFFAFFAA147BF69D00C9ECB1 /* IRWMFBitCount.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFAFFA8147BF69D00C9ECB1 /* IRWMFBitCount.m */; };
+		FFFAFFAE147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = FFFAFFAC147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h */; };
+		FFFAFFAF147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFAFFAD147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m */; };
+		FFFAFFB2147BF78900C9ECB1 /* IRWMFCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = FFFAFFB0147BF78900C9ECB1 /* IRWMFCompression.h */; };
+		FFFAFFB3147BF78900C9ECB1 /* IRWMFCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFAFFB1147BF78900C9ECB1 /* IRWMFCompression.m */; };
+		FFFAFFB6147C023900C9ECB1 /* IRWMFBitmapObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FFFAFFB4147C023900C9ECB1 /* IRWMFBitmapObject.h */; };
+		FFFAFFB7147C023900C9ECB1 /* IRWMFBitmapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFAFFB5147C023900C9ECB1 /* IRWMFBitmapObject.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF5C88F6147816AE00D794AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFAE51C4147055C00006BA76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFAE51CC147055C00006BA76;
+			remoteInfo = IRWMFKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FF0D42401474237600340287 /* IRWMFRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRecord.h; sourceTree = "<group>"; };
@@ -30,6 +90,48 @@
 		FF0D424A1474238500340287 /* IRWMFDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFDecoder.m; sourceTree = "<group>"; };
 		FF0D424D147432A100340287 /* IRWMFDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFDecoding.h; sourceTree = "<group>"; };
 		FF0D424F1474364E00340287 /* IRWMFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFDefines.h; sourceTree = "<group>"; };
+		FF544BAF147D5BC80060DD57 /* IRWMFRGBQuadObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRGBQuadObject.h; sourceTree = "<group>"; };
+		FF544BB0147D5BC80060DD57 /* IRWMFRGBQuadObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFRGBQuadObject.m; sourceTree = "<group>"; };
+		FF5C88E21477DDE500D794AB /* IRWMFKitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRWMFKitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5C88E31477DDE500D794AB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FF5C88EA1477DDE500D794AB /* IRWMFKitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IRWMFKitTest-Info.plist"; sourceTree = "<group>"; };
+		FF5C88EC1477DDE500D794AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF5C88EE1477DDE500D794AB /* IRWMFKitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRWMFKitTest.h; sourceTree = "<group>"; };
+		FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRWMFKitTest.m; sourceTree = "<group>"; };
+		FF5C88F11477DDE500D794AB /* IRWMFKitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKitTest-Prefix.pch"; sourceTree = "<group>"; };
+		FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRWMFKitTest-Word-RTF-Embedded.wmf"; sourceTree = "<group>"; };
+		FF5C894B1478334E00D794AB /* IRWMFDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFDefines.m; sourceTree = "<group>"; };
+		FF5C894E147835B900D794AB /* IRWMFRecordType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRecordType.h; sourceTree = "<group>"; };
+		FF5C894F147835B900D794AB /* IRWMFRecordType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFRecordType.m; sourceTree = "<group>"; };
+		FF5C8952147836A700D794AB /* IRWMFExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFExportSession.h; sourceTree = "<group>"; };
+		FF5C8953147836A700D794AB /* IRWMFExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFExportSession.m; sourceTree = "<group>"; };
+		FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRecordExporting.h; sourceTree = "<group>"; };
+		FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IRWMFDocument+Exporting.h"; sourceTree = "<group>"; };
+		FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IRWMFDocument+Exporting.m"; sourceTree = "<group>"; };
+		FF8FECC0147AADFC00C6AFFD /* IRWMFHeaderRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFHeaderRecord.h; sourceTree = "<group>"; };
+		FF8FECC1147AADFC00C6AFFD /* IRWMFHeaderRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFHeaderRecord.m; sourceTree = "<group>"; };
+		FF8FECC5147AB07A00C6AFFD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FF8FECC7147AB08800C6AFFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FF8FECC9147AB17C00C6AFFD /* IRWMFMapMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFMapMode.h; sourceTree = "<group>"; };
+		FF8FECCA147AB17C00C6AFFD /* IRWMFMapMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFMapMode.m; sourceTree = "<group>"; };
+		FF8FECCD147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetMapModeRecord.h; sourceTree = "<group>"; };
+		FF8FECCE147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetMapModeRecord.m; sourceTree = "<group>"; };
+		FF8FECD1147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetWindowOriginRecord.h; sourceTree = "<group>"; };
+		FF8FECD2147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetWindowOriginRecord.m; sourceTree = "<group>"; };
+		FF8FECD5147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetWindowExtentRecord.h; sourceTree = "<group>"; };
+		FF8FECD6147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetWindowExtentRecord.m; sourceTree = "<group>"; };
+		FF8FECD9147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSaveDeviceContextRecord.h; sourceTree = "<group>"; };
+		FF8FECDA147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSaveDeviceContextRecord.m; sourceTree = "<group>"; };
+		FF8FECDD147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFSetStretchBiltRecord.h; sourceTree = "<group>"; };
+		FF8FECDE147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFSetStretchBiltRecord.m; sourceTree = "<group>"; };
+		FF8FECE1147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFBitMapStretchBiltRecord.h; sourceTree = "<group>"; };
+		FF8FECE2147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFBitMapStretchBiltRecord.m; sourceTree = "<group>"; };
+		FF8FECE5147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFRestoreDeviceContextRecord.h; sourceTree = "<group>"; };
+		FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFRestoreDeviceContextRecord.m; sourceTree = "<group>"; };
+		FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFStretchMode.h; sourceTree = "<group>"; };
+		FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFStretchMode.m; sourceTree = "<group>"; };
+		FF8FED30147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFBitmapInfoHeaderObject.h; sourceTree = "<group>"; };
+		FF8FED31147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFBitmapInfoHeaderObject.m; sourceTree = "<group>"; };
 		FFAE51CD147055C00006BA76 /* libIRWMFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRWMFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAE51D0147055C00006BA76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFAE51D4147055C00006BA76 /* IRWMFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRWMFKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -37,9 +139,31 @@
 		FFAE51D6147055C00006BA76 /* IRWMFKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRWMFKit.m; sourceTree = "<group>"; };
 		FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFDocument.h; sourceTree = "<group>"; };
 		FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFDocument.m; sourceTree = "<group>"; };
+		FFC83F23147D72B5005CACBC /* IRWMFColorUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFColorUsage.h; sourceTree = "<group>"; };
+		FFC83F24147D72B5005CACBC /* IRWMFColorUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFColorUsage.m; sourceTree = "<group>"; };
+		FFFAFFA7147BF69D00C9ECB1 /* IRWMFBitCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFBitCount.h; sourceTree = "<group>"; };
+		FFFAFFA8147BF69D00C9ECB1 /* IRWMFBitCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFBitCount.m; sourceTree = "<group>"; };
+		FFFAFFAC147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFLogicalColorSpace.h; sourceTree = "<group>"; };
+		FFFAFFAD147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFLogicalColorSpace.m; sourceTree = "<group>"; };
+		FFFAFFB0147BF78900C9ECB1 /* IRWMFCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFCompression.h; sourceTree = "<group>"; };
+		FFFAFFB1147BF78900C9ECB1 /* IRWMFCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFCompression.m; sourceTree = "<group>"; };
+		FFFAFFB4147C023900C9ECB1 /* IRWMFBitmapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRWMFBitmapObject.h; sourceTree = "<group>"; };
+		FFFAFFB5147C023900C9ECB1 /* IRWMFBitmapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRWMFBitmapObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FF5C88DE1477DDE500D794AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C88F8147816B600D794AB /* libIRWMFKit.a in Frameworks */,
+				FF8FECC8147AB08800C6AFFD /* CoreGraphics.framework in Frameworks */,
+				FF8FECC6147AB07A00C6AFFD /* QuartzCore.framework in Frameworks */,
+				FF5C88E41477DDE500D794AB /* SenTestingKit.framework in Frameworks */,
+				FF5C88E71477DDE500D794AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFAE51CA147055C00006BA76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,10 +175,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF5C88E81477DDE500D794AB /* IRWMFKitTest */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C88EE1477DDE500D794AB /* IRWMFKitTest.h */,
+				FF5C88EF1477DDE500D794AB /* IRWMFKitTest.m */,
+				FF5C88E91477DDE500D794AB /* Supporting Files */,
+			);
+			path = IRWMFKitTest;
+			sourceTree = "<group>";
+		};
+		FF5C88E91477DDE500D794AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C89481478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf */,
+				FF5C88EA1477DDE500D794AB /* IRWMFKitTest-Info.plist */,
+				FF5C88EB1477DDE500D794AB /* InfoPlist.strings */,
+				FF5C88F11477DDE500D794AB /* IRWMFKitTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF5C894A147831E300D794AB /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D42401474237600340287 /* IRWMFRecord.h */,
+				FF0D42411474237600340287 /* IRWMFRecord.m */,
+				FF8FECC0147AADFC00C6AFFD /* IRWMFHeaderRecord.h */,
+				FF8FECC1147AADFC00C6AFFD /* IRWMFHeaderRecord.m */,
+				FF8FECCD147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h */,
+				FF8FECCE147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m */,
+				FF8FECD1147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h */,
+				FF8FECD2147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m */,
+				FF8FECD5147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.h */,
+				FF8FECD6147AB66200C6AFFD /* IRWMFSetWindowExtentRecord.m */,
+				FF8FECD9147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h */,
+				FF8FECDA147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m */,
+				FF8FECDD147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.h */,
+				FF8FECDE147AB67300C6AFFD /* IRWMFSetStretchBiltRecord.m */,
+				FF8FECE1147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h */,
+				FF8FECE2147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m */,
+				FF8FECE5147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h */,
+				FF8FECE6147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m */,
+			);
+			name = Records;
+			sourceTree = "<group>";
+		};
+		FF5C894D147835A300D794AB /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D424F1474364E00340287 /* IRWMFDefines.h */,
+				FF5C894B1478334E00D794AB /* IRWMFDefines.m */,
+				FF5C894E147835B900D794AB /* IRWMFRecordType.h */,
+				FF5C894F147835B900D794AB /* IRWMFRecordType.m */,
+				FF8FECC9147AB17C00C6AFFD /* IRWMFMapMode.h */,
+				FF8FECCA147AB17C00C6AFFD /* IRWMFMapMode.m */,
+				FF8FED2B147ABACF00C6AFFD /* IRWMFStretchMode.h */,
+				FF8FED2C147ABACF00C6AFFD /* IRWMFStretchMode.m */,
+				FFFAFFA7147BF69D00C9ECB1 /* IRWMFBitCount.h */,
+				FFFAFFA8147BF69D00C9ECB1 /* IRWMFBitCount.m */,
+				FFFAFFAC147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h */,
+				FFFAFFAD147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m */,
+				FFFAFFB0147BF78900C9ECB1 /* IRWMFCompression.h */,
+				FFFAFFB1147BF78900C9ECB1 /* IRWMFCompression.m */,
+				FFC83F23147D72B5005CACBC /* IRWMFColorUsage.h */,
+				FFC83F24147D72B5005CACBC /* IRWMFColorUsage.m */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		FF5C8958147836DD00D794AB /* Exporting */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C8956147836BB00D794AB /* IRWMFRecordExporting.h */,
+				FF5C8952147836A700D794AB /* IRWMFExportSession.h */,
+				FF5C8953147836A700D794AB /* IRWMFExportSession.m */,
+				FF5C8959147836EF00D794AB /* IRWMFDocument+Exporting.h */,
+				FF5C895A147836EF00D794AB /* IRWMFDocument+Exporting.m */,
+			);
+			name = Exporting;
+			sourceTree = "<group>";
+		};
+		FF8FED2F147AC1F500C6AFFD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D42451474237E00340287 /* IRWMFObject.h */,
+				FF0D42461474237E00340287 /* IRWMFObject.m */,
+				FFFAFFB4147C023900C9ECB1 /* IRWMFBitmapObject.h */,
+				FFFAFFB5147C023900C9ECB1 /* IRWMFBitmapObject.m */,
+				FF8FED30147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h */,
+				FF8FED31147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m */,
+				FF544BAF147D5BC80060DD57 /* IRWMFRGBQuadObject.h */,
+				FF544BB0147D5BC80060DD57 /* IRWMFRGBQuadObject.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		FFAE51C2147055C00006BA76 = {
 			isa = PBXGroup;
 			children = (
 				FFAE51D2147055C00006BA76 /* IRWMFKit */,
+				FF5C88E81477DDE500D794AB /* IRWMFKitTest */,
 				FFAE51CF147055C00006BA76 /* Frameworks */,
 				FFAE51CE147055C00006BA76 /* Products */,
 			);
@@ -64,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				FFAE51CD147055C00006BA76 /* libIRWMFKit.a */,
+				FF5C88E21477DDE500D794AB /* IRWMFKitTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +294,9 @@
 			isa = PBXGroup;
 			children = (
 				FFAE51D0147055C00006BA76 /* Foundation.framework */,
+				FF5C88E31477DDE500D794AB /* SenTestingKit.framework */,
+				FF8FECC7147AB08800C6AFFD /* CoreGraphics.framework */,
+				FF8FECC5147AB07A00C6AFFD /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,18 +304,17 @@
 		FFAE51D2147055C00006BA76 /* IRWMFKit */ = {
 			isa = PBXGroup;
 			children = (
+				FF5C894D147835A300D794AB /* Defines */,
 				FFAE51D5147055C00006BA76 /* IRWMFKit.h */,
 				FFAE51D6147055C00006BA76 /* IRWMFKit.m */,
 				FFAE51E0147055FA0006BA76 /* IRWMFDocument.h */,
 				FFAE51E1147055FA0006BA76 /* IRWMFDocument.m */,
 				FF0D424D147432A100340287 /* IRWMFDecoding.h */,
-				FF0D42401474237600340287 /* IRWMFRecord.h */,
-				FF0D42411474237600340287 /* IRWMFRecord.m */,
-				FF0D42451474237E00340287 /* IRWMFObject.h */,
-				FF0D42461474237E00340287 /* IRWMFObject.m */,
+				FF5C894A147831E300D794AB /* Records */,
+				FF8FED2F147AC1F500C6AFFD /* Objects */,
 				FF0D42491474238500340287 /* IRWMFDecoder.h */,
 				FF0D424A1474238500340287 /* IRWMFDecoder.m */,
-				FF0D424F1474364E00340287 /* IRWMFDefines.h */,
+				FF5C8958147836DD00D794AB /* Exporting */,
 				FFAE51D3147055C00006BA76 /* Supporting Files */,
 			);
 			path = IRWMFKit;
@@ -117,12 +341,52 @@
 				FF0D424B1474238500340287 /* IRWMFDecoder.h in Headers */,
 				FF0D424E147432A100340287 /* IRWMFDecoding.h in Headers */,
 				FF0D42501474364E00340287 /* IRWMFDefines.h in Headers */,
+				FF5C8950147835B900D794AB /* IRWMFRecordType.h in Headers */,
+				FF5C8954147836A700D794AB /* IRWMFExportSession.h in Headers */,
+				FF5C8957147836BB00D794AB /* IRWMFRecordExporting.h in Headers */,
+				FF5C895B147836EF00D794AB /* IRWMFDocument+Exporting.h in Headers */,
+				FF8FECC2147AADFC00C6AFFD /* IRWMFHeaderRecord.h in Headers */,
+				FF8FECCB147AB17C00C6AFFD /* IRWMFMapMode.h in Headers */,
+				FF8FECCF147AB1D200C6AFFD /* IRWMFSetMapModeRecord.h in Headers */,
+				FF8FECD3147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.h in Headers */,
+				FF8FECD7147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.h in Headers */,
+				FF8FECDB147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.h in Headers */,
+				FF8FECDF147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.h in Headers */,
+				FF8FECE3147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.h in Headers */,
+				FF8FECE7147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.h in Headers */,
+				FF8FED2D147ABACF00C6AFFD /* IRWMFStretchMode.h in Headers */,
+				FF8FED32147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.h in Headers */,
+				FFFAFFA9147BF69D00C9ECB1 /* IRWMFBitCount.h in Headers */,
+				FFFAFFAE147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.h in Headers */,
+				FFFAFFB2147BF78900C9ECB1 /* IRWMFCompression.h in Headers */,
+				FFFAFFB6147C023900C9ECB1 /* IRWMFBitmapObject.h in Headers */,
+				FF544BB1147D5BC80060DD57 /* IRWMFRGBQuadObject.h in Headers */,
+				FFC83F25147D72B5005CACBC /* IRWMFColorUsage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FF5C88E11477DDE500D794AB /* IRWMFKitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF5C88F41477DDE500D794AB /* Build configuration list for PBXNativeTarget "IRWMFKitTest" */;
+			buildPhases = (
+				FF5C88DD1477DDE500D794AB /* Sources */,
+				FF5C88DE1477DDE500D794AB /* Frameworks */,
+				FF5C88DF1477DDE500D794AB /* Resources */,
+				FF5C88E01477DDE500D794AB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF5C88F7147816AE00D794AB /* PBXTargetDependency */,
+			);
+			name = IRWMFKitTest;
+			productName = IRWMFKitTest;
+			productReference = FF5C88E21477DDE500D794AB /* IRWMFKitTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		FFAE51CC147055C00006BA76 /* IRWMFKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFAE51DA147055C00006BA76 /* Build configuration list for PBXNativeTarget "IRWMFKit" */;
@@ -161,11 +425,49 @@
 			projectRoot = "";
 			targets = (
 				FFAE51CC147055C00006BA76 /* IRWMFKit */,
+				FF5C88E11477DDE500D794AB /* IRWMFKitTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		FF5C88DF1477DDE500D794AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C88ED1477DDE500D794AB /* InfoPlist.strings in Resources */,
+				FF5C89491478183B00D794AB /* IRWMFKitTest-Word-RTF-Embedded.wmf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FF5C88E01477DDE500D794AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		FF5C88DD1477DDE500D794AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5C88F01477DDE500D794AB /* IRWMFKitTest.m in Sources */,
+				FF5C894C1478334E00D794AB /* IRWMFDefines.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFAE51C9147055C00006BA76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,12 +477,89 @@
 				FF0D42431474237600340287 /* IRWMFRecord.m in Sources */,
 				FF0D42481474237E00340287 /* IRWMFObject.m in Sources */,
 				FF0D424C1474238500340287 /* IRWMFDecoder.m in Sources */,
+				FF5C8951147835B900D794AB /* IRWMFRecordType.m in Sources */,
+				FF5C8955147836A700D794AB /* IRWMFExportSession.m in Sources */,
+				FF5C895C147836EF00D794AB /* IRWMFDocument+Exporting.m in Sources */,
+				FF8FECC3147AADFC00C6AFFD /* IRWMFHeaderRecord.m in Sources */,
+				FF8FECCC147AB17C00C6AFFD /* IRWMFMapMode.m in Sources */,
+				FF8FECD0147AB1D200C6AFFD /* IRWMFSetMapModeRecord.m in Sources */,
+				FF8FECD4147AB65800C6AFFD /* IRWMFSetWindowOriginRecord.m in Sources */,
+				FF8FECD8147AB66300C6AFFD /* IRWMFSetWindowExtentRecord.m in Sources */,
+				FF8FECDC147AB66C00C6AFFD /* IRWMFSaveDeviceContextRecord.m in Sources */,
+				FF8FECE0147AB67400C6AFFD /* IRWMFSetStretchBiltRecord.m in Sources */,
+				FF8FECE4147AB67B00C6AFFD /* IRWMFBitMapStretchBiltRecord.m in Sources */,
+				FF8FECE8147AB68700C6AFFD /* IRWMFRestoreDeviceContextRecord.m in Sources */,
+				FF8FED2E147ABACF00C6AFFD /* IRWMFStretchMode.m in Sources */,
+				FF8FED33147AC20A00C6AFFD /* IRWMFBitmapInfoHeaderObject.m in Sources */,
+				FFFAFFAA147BF69D00C9ECB1 /* IRWMFBitCount.m in Sources */,
+				FFFAFFAF147BF6E400C9ECB1 /* IRWMFLogicalColorSpace.m in Sources */,
+				FFFAFFB3147BF78900C9ECB1 /* IRWMFCompression.m in Sources */,
+				FFFAFFB7147C023900C9ECB1 /* IRWMFBitmapObject.m in Sources */,
+				FF544BB2147D5BC80060DD57 /* IRWMFRGBQuadObject.m in Sources */,
+				FFC83F26147D72B5005CACBC /* IRWMFColorUsage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FF5C88F7147816AE00D794AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFAE51CC147055C00006BA76 /* IRWMFKit */;
+			targetProxy = FF5C88F6147816AE00D794AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF5C88EB1477DDE500D794AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5C88EC1477DDE500D794AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		FF5C88F21477DDE500D794AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRWMFKitTest/IRWMFKitTest-Prefix.pch";
+				INFOPLIST_FILE = "IRWMFKitTest/IRWMFKitTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FF5C88F31477DDE500D794AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRWMFKitTest/IRWMFKitTest-Prefix.pch";
+				INFOPLIST_FILE = "IRWMFKitTest/IRWMFKitTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		FFAE51D8147055C00006BA76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -227,7 +606,10 @@
 				DSTROOT = /tmp/IRWMFKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRWMFKit/IRWMFKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -239,7 +621,10 @@
 				DSTROOT = /tmp/IRWMFKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IRWMFKit/IRWMFKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -248,6 +633,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FF5C88F41477DDE500D794AB /* Build configuration list for PBXNativeTarget "IRWMFKitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5C88F21477DDE500D794AB /* Debug */,
+				FF5C88F31477DDE500D794AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FFAE51C7147055C00006BA76 /* Build configuration list for PBXProject "IRWMFKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
