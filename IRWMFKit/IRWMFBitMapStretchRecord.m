@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Iridia Productions. All rights reserved.
 //
 
-#import "IRWMFBitMapStretchBiltRecord.h"
+#import "IRWMFBitMapStretchRecord.h"
 #import "IRWMFExportSession.h"
 
 #import "IRWMFBitmapObject.h"
@@ -14,9 +14,10 @@
 #define BYTES_PER_WORD 2
 #define BYTES_PER_DWORD 4
 
-@implementation IRWMFBitMapStretchBiltRecord
+@implementation IRWMFBitMapStretchRecord
 
 @synthesize rasterOperation;
+@synthesize colorUsage;
 @synthesize sourceRectHeight, sourceRectWidth, sourceRectYOffset, sourceRectXOffset;
 @synthesize destinationRectHeight, destinationRectWidth, destinationRectYOffset, destinationRectXOffset;
 @synthesize bitmapObject;
@@ -41,14 +42,37 @@
 	int16_t recordFunction = OSReadLittleInt16(dataBytes, ownOffset);
 	ownOffset += 2;
 	
-	//	ummm	
-	BOOL recordHasEmbeddedBitmap = (recordSize != ((recordFunction >> 8) + 3));
+	BOOL recordHasEmbeddedBitmap;
+	BOOL recordHasColorUsageEnumeration = NO;
+	
+	switch (recordFunction) {
+		
+		case IRWMFRecordType_META_DIBSTRETCHBLT:
+			recordHasEmbeddedBitmap = (recordSize != ((recordFunction >> 8) + 3));
+			recordHasColorUsageEnumeration = NO;
+			break;
+		
+		case IRWMFRecordType_META_STRETCHDIB:
+			recordHasEmbeddedBitmap = YES;
+			recordHasColorUsageEnumeration = YES;
+			break;
+
+		default:
+			NSParameterAssert(NO);
+			break;
+			
+	}
 	
 	if (recordHasEmbeddedBitmap) {
 	
 		rasterOperation = OSReadLittleInt32(dataBytes, ownOffset);
 		ownOffset += 4;
-				
+		
+		if (recordHasColorUsageEnumeration) {
+			colorUsage = OSReadLittleInt16(dataBytes, ownOffset);
+			ownOffset += 2;
+		}
+		
 		sourceRectHeight = OSReadLittleInt16(dataBytes, ownOffset);
 		ownOffset += 2;
 		
@@ -116,7 +140,8 @@
 - (NSString *) descriptionSubstring {
 
 	return [[[super descriptionSubstring] stringByAppendingString:[NSString stringWithFormat:	
-		@"; From Rect = { %f, %f; %f, %f }; To Rect = { %f, %f; %f, %f }; Bitmap = ",
+		@"; Raster Operation = %x; Color Usage = %x; From Rect = { %f, %f; %f, %f }; To Rect = { %f, %f; %f, %f }; Bitmap = ",
+		rasterOperation, colorUsage,
 		sourceRectXOffset, sourceRectYOffset, sourceRectWidth, sourceRectHeight,
 		destinationRectXOffset, destinationRectYOffset, destinationRectWidth, destinationRectHeight
 	]] stringByAppendingString:
@@ -126,7 +151,7 @@
 
 + (BOOL) canHandleRecordType:(IRWMFRecordType)aType {
 
-	return (aType == IRWMFRecordType_META_DIBSTRETCHBLT);
+	return ((aType == IRWMFRecordType_META_DIBSTRETCHBLT) || (aType == IRWMFRecordType_META_STRETCHDIB));
 
 }
 
@@ -135,10 +160,10 @@
 	CGContextRef context = aSession.context;
 	CGImageRef drawnImage = self.bitmapObject.image;
 	
-	CGRect fromRect = (CGRect){
-		sourceRectXOffset, sourceRectYOffset,
-		sourceRectWidth, sourceRectHeight
-	};
+	//	CGRect fromRect = (CGRect){
+	//		sourceRectXOffset, sourceRectYOffset,
+	//		sourceRectWidth, sourceRectHeight
+	//	};
 	
 	CGRect toRect = (CGRect){
 		destinationRectXOffset, destinationRectYOffset,

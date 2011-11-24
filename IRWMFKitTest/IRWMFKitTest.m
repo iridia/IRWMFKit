@@ -13,10 +13,44 @@
 
 @implementation IRWMFKitTest
 
+- (NSData *) pngDataForImage:(CGImageRef)anImage {
+
+	NSMutableData *pngData = [NSMutableData data];
+	
+	CGImageDestinationRef pngDestination = CGImageDestinationCreateWithData((CFMutableDataRef)pngData, kUTTypePNG, 1, NULL);
+	CGImageDestinationAddImage(pngDestination, anImage, NULL);
+	CGImageDestinationFinalize(pngDestination);
+	
+	if (pngDestination)
+		CFRelease(pngDestination);
+	
+	return pngData;
+
+}
+
+- (NSString *) exportedFilePathForData:(NSData *)data {
+
+	NSString *fileName = [[NSString stringWithFormat:@"Image Exported %@", [[NSDate date] description]] stringByAppendingPathExtension:@"png"];
+	NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:fileName];
+	[[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
+	
+	if ([data writeToFile:filePath atomically:NO])
+		return filePath;
+	
+	return nil;
+
+}
+
 - (IRWMFDocument *) newTestDocument {
 
+	return [self newTestDocumentForFileNamed:@"IRWMFKitTest-WordPad-RTF-Embedded"];
+
+}
+
+- (IRWMFDocument *) newTestDocumentForFileNamed:(NSString *)aFileName {
+
 	NSBundle *ownBundle = [NSBundle bundleForClass:[self class]];
-	NSString *imagePath = [ownBundle pathForResource:@"IRWMFKitTest-Word-RTF-Embedded" ofType:@"wmf"];
+	NSString *imagePath = [ownBundle pathForResource:aFileName ofType:@"wmf"];
 	STAssertNotNil(imagePath, @"Test image must exist.");
 	
 	IRWMFDocument *document = [IRWMFDocument documentWithData:[NSData dataWithContentsOfMappedFile:imagePath]];
@@ -42,7 +76,16 @@
 	
 	if (fullResolutionImage)
 		CFRelease(fullResolutionImage);
+	
+}
 
+- (void) testBitmapExtraction {
+
+	IRWMFDocument *document = [[self newTestDocument] autorelease];
+	NSArray *bitmaps = [document copyEmbeddedImages];
+	
+	STAssertTrue(([bitmaps count] == 1), @"Number of embedded images in document should be 1");
+	
 }
 
 @end

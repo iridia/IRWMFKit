@@ -12,6 +12,7 @@
 #import <libkern/OSByteOrder.h>
 
 #define BYTES_PER_WORD 2
+#define __IRWMFRecord_Strict__ 1
 	
 @class IRWMFRecord;
 @class IRWMFHeaderRecord;
@@ -27,8 +28,12 @@ static void __attribute__((constructor)) initialize() {
 	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSetWindowExtentRecord") forRecordType:IRWMFRecordType_META_SETWINDOWEXT];
 	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSaveDeviceContextRecord") forRecordType:IRWMFRecordType_META_SAVEDC];
 	[IRWMFRecord setClass:NSClassFromString(@"IRWMFSetStretchBiltRecord") forRecordType:IRWMFRecordType_META_SETSTRETCHBLTMODE];
-	[IRWMFRecord setClass:NSClassFromString(@"IRWMFBitMapStretchBiltRecord") forRecordType:IRWMFRecordType_META_DIBSTRETCHBLT];
+	
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFBitMapStretchRecord") forRecordType:IRWMFRecordType_META_DIBSTRETCHBLT];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFBitMapStretchRecord") forRecordType:IRWMFRecordType_META_STRETCHDIB];
+
 	[IRWMFRecord setClass:NSClassFromString(@"IRWMFRestoreDeviceContextRecord") forRecordType:IRWMFRecordType_META_RESTOREDC];
+	[IRWMFRecord setClass:NSClassFromString(@"IRWMFEndOfFileRecord") forRecordType:IRWMFRecordType_META_EOF];
 
 	[pool drain];	
 }
@@ -49,9 +54,17 @@ static void __attribute__((constructor)) initialize() {
 	IRWMFRecordType inferredRecordType = [self recordTypeFromData:data atByteOffset:offsetBytes];
 	Class usedClass = [self classForRecordType:inferredRecordType];
 	
-	if (!usedClass) {
-		usedClass = [IRWMFRecord class];	//	Base class does nothing
-	}
+	#ifndef __IRWMFRecord_Strict__
+		
+		if (!usedClass) {
+			usedClass = [IRWMFRecord class];	//	Base class does nothing
+		}
+	
+	#else
+		
+		NSAssert1(usedClass, @"Class does not exist for WMF record type %@", IRWMFRecordTypeNames[inferredRecordType]);
+
+	#endif
 	
 	IRWMFRecord *returnedRecord = [[(IRWMFRecord *)[usedClass alloc] init] autorelease];
 	[returnedRecord configureWithData:data offset:offsetBytes usedBytes:numberOfConsumedBytes error:error];
@@ -154,6 +167,10 @@ static void __attribute__((constructor)) initialize() {
 }
 
 + (BOOL) canHandleRecordType:(IRWMFRecordType)aType {
+
+	#ifdef __IRWMFRecord_Strict__
+		return NO;
+	#endif
 
 	return YES;
 

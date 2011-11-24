@@ -7,12 +7,13 @@
 //
 
 #import "IRWMFRecord.h"
-#import "IRWMFObject.h"
+#import "IRWMFDefines.h"
 
 @class IRWMFBitmapObject;
-@interface IRWMFBitMapStretchBiltRecord : IRWMFRecord <IRWMFRecordExporting>
+@interface IRWMFBitMapStretchRecord : IRWMFRecord <IRWMFRecordExporting>
 
 @property (nonatomic, readonly, assign) int32_t rasterOperation;
+@property (nonatomic, readonly, assign) IRWMFColorUsage colorUsage;	//	Only if record type is IRWMFRecordType_META_STRETCHDIB, otherwise, might be uninitialized (0)
 @property (nonatomic, readonly, assign) int16_t sourceRectHeight;
 @property (nonatomic, readonly, assign) int16_t sourceRectWidth;
 @property (nonatomic, readonly, assign) int16_t sourceRectYOffset;

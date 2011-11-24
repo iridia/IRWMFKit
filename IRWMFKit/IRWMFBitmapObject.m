@@ -40,8 +40,6 @@
 		return;
 	}
 	
-	NSLog(@"INFO HEADER now %@", infoHeader);
-	
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	CGContextRef context = CGBitmapContextCreate(NULL, infoHeader.width, infoHeader.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
 	CGContextSetFillColorSpace(context, colorSpace);
