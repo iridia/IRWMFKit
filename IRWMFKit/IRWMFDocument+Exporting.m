@@ -11,6 +11,8 @@
 #import "IRWMFRecord.h"
 #import "IRWMFRecordExporting.h"
 
+#import "IRWMFBitmapObject.h"
+
 @implementation IRWMFDocument (Exporting)
 
 - (CGImageRef) newFullResolutionImage {
@@ -40,5 +42,27 @@
 	return (CGImageRef)image;
 
 };
+
+- (NSArray *) copyEmbeddedImages {
+
+	NSMutableArray *returnedArray = [[NSMutableArray array] retain];
+	
+	[self.wmfRecords enumerateObjectsUsingBlock: ^ (IRWMFRecord *aRecord, NSUInteger idx, BOOL *stop) {
+	
+		if (![aRecord respondsToSelector:@selector(bitmapObject)])
+			return;
+		
+		IRWMFBitmapObject *bitmapObject = [aRecord performSelector:@selector(bitmapObject)];
+		if (![bitmapObject isKindOfClass:[IRWMFBitmapObject class]])
+			return;
+		
+		CGImageRef bitmapImage = [bitmapObject image];
+		[returnedArray addObject:(id)bitmapImage];
+		
+	}];
+	
+	return returnedArray;
+
+}
 
 @end
